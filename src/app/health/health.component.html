@@ -1,0 +1,237 @@
+<html>
+    <head>
+        <title>CSS Cards</title>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" rel="stylesheet">  
+
+    </head>
+<body>
+  <nav>
+
+    <ul>
+        <li>
+            <a href="https://vitagist.com/" class="logo">
+                <img src="../../assets/vg.png" style="margin-left: -10px;" alt="">
+                <!-- <div class="nav-item">
+                    <span style="color:#004D87; font-weight: 500; font-size: 25px;">Vita</span> 
+                    <span style="color: orangered; font-weight: 500; font-size: 25px;">Gist</span>
+                </div>  -->
+            </a>
+            <!-- <span style="color:#004D87; font-weight: 500; font-size: 23px;">V</span>
+            <span style="color: orangered; font-weight: 500; font-size: 23px;">G</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/side-bar" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                 #tooltip="matTooltip"  matTooltip="HOME"  matTooltipPosition="right">home</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Home</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/document" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="DOCUMENTS"  matTooltipPosition="right">library_books</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="margin-left: 4px; color:#004D87">Document</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/connections" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="CONNECTIONS"  matTooltipPosition="right">group_add</mat-icon>
+            </a>
+        </li>
+
+        <li>
+            <a routerLink="/health" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="HEALTH"  matTooltipPosition="right">favorite_border</mat-icon>
+            </a>
+        </li>
+
+        <li>
+            <a routerLink="/chat" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="CHAT"  matTooltipPosition="right">chat</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Settings</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/profile" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="PROFILE"  matTooltipPosition="right">account_circle</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Profile</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/settings" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="SETTINGS"  matTooltipPosition="right">settings</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Settings</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/notifications" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="NOTIFICATIONS"  matTooltipPosition="right">notifications_active</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Notifications</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/reminder" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="REMINDERS"  matTooltipPosition="right">query_builder</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Reminders</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/audit" class="logo">
+                <mat-icon style="margin-left: -10px; width: 38px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="AUDIT TRAILS"  matTooltipPosition="right">history</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Reminders</span> -->
+        </li>
+
+
+        <li>
+            <a routerLink="/logout" id="logoo" class="logout">
+                <mat-icon style=" margin-left: -10px; width: 40px; height: 30px;"
+                #tooltip="matTooltip"  matTooltip="LOGOUT"  matTooltipPosition="right">exit_to_app</mat-icon><br><br>
+                <!-- <p style="color:#004D87; font-size: 18px; font-weight: 500; margin-top: 30px; margin-left: -42px;"> Logout</p> -->
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+<!--Nav ends here-->
+  <div class="container mt-4">
+        <h1 class="home">Health</h1><br> 
+      <!--3 Cards..-->     
+      <div class="container-fluid row">
+        <div class="column">
+          <mat-card class="card" [routerLink]="['/healthdashboard']" >
+            <mat-card-title>
+              <a class="proBox">
+                <i class="fa-laptop-medical fas" aria-hidden="true" style="color:#034261; font-size:70px; text-align: center;"></i> <br><br>
+                <h3> <b class="btag" style="font-family: 'Gill Sans'; font-size: 16px; font-weight: 600;">Health info</b>
+                </h3>
+              </a>
+            </mat-card-title>
+          </mat-card>
+        </div>
+
+        <div class="column">
+          <mat-card class="card" [routerLink]="['/devices']">
+            <mat-card-title>
+              <a class="proBox">
+                <i class="fa-cubes fas" aria-hidden="true" style="color:#034261; font-size:70px; text-align: center;"></i>
+                <br><br>
+                <h3> <b style="font-family: 'Gill Sans'; font-size: 16px; font-weight: 600;">Devices</b></h3>
+              </a>
+            </mat-card-title>
+          </mat-card>
+        </div>
+
+        <div class="column">
+          <mat-card class="card" (click)="get_tags('careplanlist/')" [routerLink]="['/careplan']">
+            <mat-card-title>
+              <a class="proBox">
+                <!--[routerLink]="['/careplan']"-->
+                <i class="fa-hand-holding-heart fas" aria-hidden="true" style="color:#034261; font-size:70px; text-align: center;"></i>
+                <br><br>
+                <h3> <b style="font-family: 'Gill Sans'; font-size: 16px; margin-left: -20px;font-weight: 600;">Care plan</b></h3>
+              </a>
+            </mat-card-title>
+          </mat-card>
+        </div>
+
+      </div>
+      
+  </div><br>
+
+<div class="flex-container container">
+
+  <div class="cards" *ngIf="height_len">
+    <app-bmi></app-bmi>
+  </div>
+
+  <div *ngFor="let item of latest"><!--class="cards"-->
+    <div *ngIf="item.device.systemId !== '0x1810' && item.device.systemId !== '0x181D'" class="cards">
+      <!--<div *ngIf="item.device.systemId !== '0x1810' && item.device.systemId !== '0x181D'" class="cards">-->
+      <app-singlecard 
+      [card_details]="item" 
+      [device_list]="device_list" 
+      [device_names]="device_names">
+      </app-singlecard>
+    </div>
+
+    <div *ngIf="item.device.systemId === '0x1810'" class="cards">
+      <app-three-card 
+      [card_details]="item" 
+      [device_list]="device_list" 
+      [device_names]="device_names">
+      </app-three-card>
+    </div>
+  </div>
+
+</div>
+
+<!----------------------------Add Button------------------------------------------>
+
+
+<div>
+<div class="pull-right">
+
+ <button class="btnbtn" (click)="onclick()" type="button">
+  <i class="fa fa-plus" id="addIcon" aria-hidden="true"></i>
+  {{ReadMore? " Add ":" Add "}}
+</button>
+
+
+<ng-container *ngIf="visible">
+
+  <div class="flex-container-on">
+    <div *ngFor="let item of latest">
+      <div *ngIf="item.device.systemId !== '0x1810'" class="cardsss">
+        <!--style=" right: 0px; bottom: 100px; z-index: 999; position: fixed;"-->
+        <app-singledialogcard 
+        [card_details]="item" 
+        [device_names]="device_names">
+        </app-singledialogcard>
+      </div>
+
+      <div *ngIf="item.device.systemId === '0x1810'" class="cardsss">
+        <app-three-dialog-card 
+        [card_details]="item" 
+        [device_list]="device_list" 
+        [device_names]="device_names">
+        </app-three-dialog-card>
+    </div>
+  </div></div>
+
+</ng-container>
+
+</div>
+</div>
+
+<!----------------------------/Add Button------------------------------------------>
+
+
+
+
+
+</body>
+</html>

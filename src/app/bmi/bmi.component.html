@@ -1,0 +1,29 @@
+<mat-card class="card">
+    <div class="container">
+        <div class="pull-left">
+
+            <div class="imgClass" style="padding: 6px;">
+                <i style="color:rgb(247, 91, 91); font-size: 50px;" class='fas fa-walking'></i>
+                <i class="{{card_image}}" [style]="style"></i>
+            </div>
+            <p class="device">BMI</p>
+            <h3>{{bmi}}</h3>
+            <p class="time2">Healthy Range: 18.5 to 24.9</p>
+
+        </div>
+        <div class="pull-right">
+
+            <p class="device">Weight</p>
+            <h2>{{ card_details?.weight }} <span>{{ card_details?.weigthtUnit }}</span></h2>
+            <p class="time">{{card_details?.medium_value1}} {{card_details?.high_value1}}</p>
+
+            <hr class="solid" style="color: white;">
+
+            <p class="device">Height</p>
+            <h2 *ngIf="card_details?.heightUnit!='feet'">{{ card_details?.height }} <span>{{ card_details?.heightUnit }}</span></h2>
+            <h2 *ngIf="card_details?.heightUnit=='feet'">{{ card_details?.height.split('.',1)[0] }}' {{ card_details?.height.split('.')[1] }}"</h2>
+            <p class="time">{{ card_details?.medium_value2 }} {{ card_details?.high_value2 }}</p>
+
+        </div>
+    </div>
+</mat-card>

@@ -1,0 +1,32 @@
+<mat-card-content>
+
+    <div class="closeEdit">
+      <button (click)="closeDialog()"
+        style="float: right;  font-size: 20px; font-weight: 500; margin-top: -18px;  margin-right: -18px;"
+        mat-raised-button class="btn btn-warn" color="warn" mat-mini-fab> X </button>
+    </div> 
+  
+    <h1 mat-dialog-title style="font: normal normal 400 2rem Gill sans;">Add Reminders</h1>
+  
+    <form [formGroup]="myForm" (ngSubmit)="submitData(myForm.value)">
+  
+          <mat-form-field appearance="fill" style="width: 100%;">
+            <mat-label>Message: </mat-label>
+            <textarea matInput #message formControlName='message' 
+            [ngModel]="add_details?.message" placeholder="Enter Message" required></textarea>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" style="width: 100%;">
+            <mat-label>Target Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="target"
+              [ngModel]="add_details?.target" placeholder="Target date" required>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field> 
+    
+      <div class="pull-right" mat-dialog-actions>
+        <button mat-raised-button class="btn btn-success" type="submit" style="background-color: rgb(4, 140, 4)" cdkFocusInitial><b style="color: white;">Save</b></button>
+      </div>
+  
+    </form>
+  </mat-card-content>

@@ -1,0 +1,393 @@
+<html>
+<body>
+<style>
+    @import url('~font-awesome/css/font-awesome.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+
+}
+
+body {
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+}
+
+nav {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  background: #d9e8f8;
+  width: 60px;
+  /*nav width*/
+  overflow: hidden;
+  transition: width 0.2s linear;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0);
+}
+
+.logo {
+  text-align: center;
+  display: flex;
+  transition: all 0.5s ease;
+  margin: 10px 0 0 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 45px;
+  border-radius: 50%;
+  top: 0px;
+  left: 0px;
+
+  margin: -5px;
+}
+
+.logo span {
+  font-weight: 600;
+  padding-left: 2px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+a {
+  position: relative;
+  color: rgb(85, 83, 83);
+  font-size: 14px;
+  display: table;
+  width: 300px;
+  padding: 10px;
+}
+
+.nav-item {
+  position: relative;
+  top: -10px;
+  margin-left: 18px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+a:hover {
+  background: none;
+}
+
+.logout {
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  display: flex;
+  transition: all 0.5s ease;
+  margin: 8px 0 0 8px;
+}
+
+.material-icons {
+  font-family: 'Material Icons' !important;
+}
+
+.mat-icon{
+  color: #333738;
+  font: normal normal 200 2rem Gill sans;
+}
+
+.mat-icon:hover {
+    color: rgb(116, 116, 116);
+  }
+
+/*....Nav ends hereee....*/
+  
+  mat-card-content{
+    float: right;
+    margin-right: -30px;
+    width: 100%;
+  }
+
+  .container .cont {
+/*    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 5px 5px 8px rgb(147, 147, 147);
+    height: 134%;
+    */
+    width: 65%;
+    float: right;
+    margin-right: 170px;
+  }
+  .docDoc {
+    color: rgb(1, 75, 75);
+    text-align: center;
+    padding: 25px;
+    letter-spacing: 0.15rem;
+    font: normal normal 500 2.5rem Gill sans;
+  }
+
+  .btnbtn{
+    width: 150px;
+    height: 53px;
+    bottom: 0;
+    right: 0;
+    float: right;
+    z-index: 999;
+    background: rgb(236, 239, 241);
+    color: rgb(49, 49, 49);
+    font: normal normal 550 1rem Gill sans;
+    border-radius: 50px;
+    position: fixed;
+    padding: 2%;
+    padding: 7px 16px 9px;
+    border: none;
+    opacity: 1;
+    margin: 10px;
+    }
+
+    .plus_button{
+      border: 0;
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
+          letter-spacing: 1px;
+    }
+
+    .mat_card_box{
+      width: 60%px; 
+      height: 60px; 
+      background: #EEEEEE 0% 0% no-repeat padding-box;
+    }
+
+    .plus_button_icon{
+    font-size: 25px; color: rgb(6, 5, 5);
+    }
+</style>
+
+<nav>
+
+        <ul>
+            <li>
+                <a href="https://vitagist.com/" class="logo">
+                    <img src="../../assets/vg.png" style="margin-left: -10px;" alt="">
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/side-bar" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                     #tooltip="matTooltip"  matTooltip="HOME"  matTooltipPosition="right">home</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Home</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/document" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="DOCUMENTS"  matTooltipPosition="right">library_books</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="margin-left: 4px; color:#004D87">Document</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/connections" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="CONNECTIONS"  matTooltipPosition="right">group_add</mat-icon>
+                </a>
+            </li>
+
+            <li>
+              <a routerLink="/health" class="logo">
+                  <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                  #tooltip="matTooltip"  matTooltip="HEALTH"  matTooltipPosition="right">favorite_border</mat-icon>
+              </a>
+          </li>
+
+            <li>
+                <a routerLink="/profile" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="PROFILE"  matTooltipPosition="right">account_circle</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Profile</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/settings" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="SETTINGS"  matTooltipPosition="right">settings</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Settings</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/notifications" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="NOTIFICATIONS"  matTooltipPosition="right">notifications_active</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Notifications</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/reminder" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="REMINDERS"  matTooltipPosition="right">query_builder</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Reminders</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/audit" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="AUDIT TRAILS"  matTooltipPosition="right">history</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Reminders</span> -->
+            </li>
+
+
+
+
+            <li>
+                <a routerLink="/logout" id="logoo" class="logout">
+                    <mat-icon style=" margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="LOGOUT"  matTooltipPosition="right">exit_to_app</mat-icon><br><br>
+                    <!-- <p style="color:#004D87; font-size: 18px; font-weight: 500; margin-top: 30px; margin-left: -42px;"> Logout</p> -->
+                </a>
+            </li>
+
+        </ul>
+
+</nav>
+
+<div class="container-fluid">
+<mat-card-content>
+
+<div class="container mt-3">
+        <h1 class="docDoc">My Health Profile</h1>
+<div class="container cont">
+
+  <form>
+  
+    <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+      <mat-label>Gender</mat-label>
+      <mat-select placeholder="Enter your Gender" required>
+        <mat-option *ngFor="let item of Gender" [value]="item.name">
+          {{ item.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field><br>
+  
+    <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+      <mat-label>Ethnicity</mat-label>
+      <mat-select placeholder="Enter Ethnicity" required>
+        <mat-option *ngFor="let item of Ethnicity" [value]="item.name">
+          {{ item.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field><br>
+  
+  
+    <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+      <mat-label>Height</mat-label>
+      <input type="number" matInput name="height" placeholder="Enter your Height" [ngModel]="add_details?.height"
+        required>
+    </mat-form-field><br>
+  
+    <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+      <mat-label>Weight</mat-label>
+      <input type="number" matInput name="weight" placeholder="Enter your Weight" required>
+    </mat-form-field><br>
+  
+    <mat-form-field appearance="fill" style="width: 100%;">
+      <mat-label>Date Of Birth</mat-label>
+      <input matInput [matDatepicker]="picker" placeholder="Enter your DOB" required>
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field><br>
+  
+    <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+      <mat-label>Blood Group</mat-label>
+      <mat-select placeholder="Enter Blood Group" required>
+        <!--<mat-option>Select Blood Group</mat-option>-->
+        <mat-option *ngFor="let item of bloodGroup" [value]="item.name">
+          {{ item.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field><br>
+  
+  
+    <mat-card class="mat_card_box">
+       Medical Condition    
+          <button class="plus_button">
+            <mat-icon class="plus_button_icon">add_circle</mat-icon>
+          </button>
+    </mat-card><br>
+
+    <mat-card class="mat_card_box">
+       Allergy    
+         <button class="plus_button">
+           <mat-icon class="plus_button_icon">add_circle</mat-icon>
+         </button>
+    </mat-card><br>
+
+    <mat-card class="mat_card_box">
+         Medications   
+         <button class="plus_button">
+           <mat-icon class="plus_button_icon">add_circle</mat-icon>
+         </button>
+    </mat-card><br>
+
+   <mat-card class="mat_card_box">
+         Family Medical History   
+      <button class="plus_button">
+         <mat-icon class="plus_button_icon">add_circle</mat-icon>
+      </button>
+    </mat-card><br>
+
+    <mat-card class="mat_card_box">
+         Insurance   
+       <button class="plus_button">
+           <mat-icon class="plus_button_icon">add_circle</mat-icon>
+       </button>
+     </mat-card><br>
+
+     <mat-card class="mat_card_box">
+        Immunization  
+       <button class="plus_button">
+          <mat-icon class="plus_button_icon">add_circle</mat-icon>
+       </button>
+     </mat-card><br>
+    
+
+
+     <div mat-dialog-actions class="docBut pull-right">
+      <button mat-raised-button class="btn btn-danger" style="background-color: red;"><b
+          style="color: white;">Cancel</b></button> &nbsp;
+      <button mat-raised-button class="btn btn-success" type="submit" style="background-color: rgb(4, 140, 4)"
+        cdkFocusInitial><b style="color: white;">Save</b></button>
+    </div>
+  </form>
+
+ 
+  </div></div>
+
+  </mat-card-content>
+</div>
+
+
+<!--GoBack button-->
+<div class="pull-right">
+	<button class="btnbtn" [routerLink]="['/health']"> GoBack
+	  <i class="fa fa-backward" style="color: rgb(40, 39, 39); margin-top: -16px; margin-right: -10px;width: 30%;" aria-hidden="true"></i>
+   </button>
+</div>
+<!--GoBack button ends here..-->
+
+</body>
+</html>

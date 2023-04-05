@@ -1,0 +1,1078 @@
+@import url('~font-awesome/css/font-awesome.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font: normal normal 200 2rem Gill sans;
+}
+
+body {
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+}
+
+nav {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  background: #d9e8f8;
+  width: 55px;
+  /*nav width*/
+  overflow: hidden;
+  transition: width 0.2s linear;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0);
+}
+
+.logo {
+  text-align: center;
+  display: flex;
+  transition: all 0.5s ease;
+  margin: 10px 0 0 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 45px;
+  border-radius: 50%;
+  top: 0px;
+  left: 0px;
+
+  margin: -5px;
+}
+
+.logo span {
+  font-weight: 600;
+  padding-left: 2px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+a {
+  position: relative;
+  color: rgb(85, 83, 83);
+  font-size: 14px;
+  display: table;
+  width: 300px;
+  padding: 5px;
+}
+
+.nav-item {
+  position: relative;
+  top: -10px;
+  margin-left: 18px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+a:hover {
+  background: none;
+}
+
+.logout {
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  display: flex;
+  transition: all 0.5s ease;
+  margin: 8px 0 0 8px;
+}
+
+.material-icons {
+  font-family: 'Material Icons' !important;
+}
+
+.mat-icon{
+  color: #333738;
+}
+
+.mat-icon:hover {
+    color: rgb(116, 116, 116);
+  }
+
+/*....Nav ends hereee....*/
+
+ /*     Connections    */
+.home {
+    text-align: center;
+    margin-right: -40px;
+    color: rgb(1, 75, 75);
+    letter-spacing: 0.15rem;
+    font: normal normal 500 2.5rem Gill sans;
+  }
+
+/* Box for divs  */
+.boxer{
+top: 70px;
+left: 70px;
+margin-left: 90px;
+width: 92%;
+height: 236px;
+background: rgb(129, 129, 129) 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+
+.column {
+  float: left;
+  width: 20%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  height: 170px;
+  text-align: center;
+  background-color: white;
+  position: relative; 
+  display:block;
+/* border: 0.2px solid rgb(42, 41, 41); */
+}
+
+.card:hover {
+  box-shadow: 0 20px 16px 0 rgba(136, 135, 135, 0.9);
+  border: 2.5px solid rgb(67, 67, 67);
+}
+
+.container {
+  padding: 5px 16px;
+}
+
+.proBox {
+  width: 250px;
+  margin: 80px;
+  top: -70px;
+  right: 110px;
+}
+
+
+/* Table designs and views style*/
+
+.container .cont {
+  background: white;
+  margin: 0;
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 5px 5px 8px rgb(147, 147, 147);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  text-align: left;
+  padding: 8px;
+  font: normal normal 500 1rem Gill sans;
+}
+
+th {
+  text-align: left;
+  padding: 8px;
+  font: normal normal 700 1rem Gill sans;
+}
+
+tr:nth-child(even) .mat-raised-button {
+  width: 120px;
+  height: 50px;
+  color: white;
+  margin-left: 50px;
+}
+
+/*
+tr:hover {
+  background-color:white;
+  }*/
+
+/*th data styling design*/
+.content{
+  font: normal normal 700 1.4rem Gill sans;
+}
+
+#mat-swap{
+  font-size:28px; 
+  font-weight: 500;
+}
+/* table color design*/
+
+input[type=search] {
+  border: 0.5px solid #ccc;
+  border-radius: 10px;
+  resize: vertical;
+  height: 40px;
+}
+
+.container  {
+  background: white;
+  margin: 0;
+  border-radius: 10px;
+  padding: 8px;
+/*  box-shadow: 5px 5px 8px rgb(135, 135, 135); */
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  text-align: left;
+  padding: 8px;
+  font: normal normal 500 1rem Gill sans;
+}
+
+th {
+  text-align: left;
+  padding: 8px;
+  font: normal normal 700 1.4rem Gill sans;
+  
+}
+.content{
+  font: normal normal 700 1.4rem Gill sans;
+}
+
+tr:nth-child(even) .mat-raised-button {
+  width: 120px;
+  height: 50px;
+  color: white;
+  margin-left: 50px;
+}
+
+h1 {
+  font: normal normal 400 2rem Gill sans;
+}
+
+.container {
+  margin-left: 100px;
+  width: 80%;
+}
+
+.container {
+  margin-left: 100px;
+  width: 80%;
+}
+
+.proBox {
+  width: 250px;
+  margin: 80px;
+  top: -70px;
+  right: 110px;
+}
+.container-fluid {
+  margin-left: 150px;
+  width: 100%;
+}
+
+.box {
+  top: 448px;
+  left: 170px;
+  width: 1096px;
+  height: 20px;
+  background: #EEEEEE 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 3px #00000033;
+  border: 1px solid #E6E6E6;
+  border-radius: 15px;
+  opacity: 1;
+  box-sizing: border-box;
+}
+
+
+
+/* Common care plan Card..*/
+.courses-container {
+  width: 80%;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  margin-right: -30px;
+}
+
+.course:hover {
+  box-shadow: 5px 10px 10px 10px  rgba(0, 0, 0, 0.2);
+  }
+
+.course {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  max-width: 100%;
+  margin: 20px;
+  overflow: hidden;
+  width: 700px;
+}
+
+.course-preview {
+  background-color: #2A265F;
+  color: #fff;
+  padding: 30px;
+  max-width: 250px;
+}
+
+.course-info {
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  height: 20%;
+}
+
+.user{
+  font-size:70px; text-align: center; color: #4a4b4b;
+}
+
+.btnoh {
+  background-color: #2A265F;
+  border: 0;
+  border-radius: 50px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 25px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+}
+/* Common care plan Card ends here..*/
+
+/*  Reminder Add Button   */
+.btnbtn2{
+  width: 150px;
+  height: 53px;
+  bottom: 0;
+  right: 0;
+  float: right;
+  z-index: 999;
+  background: rgb(24, 26, 27);
+  color: white;
+  font: normal normal 550 1rem Gill sans;
+  border-radius: 50px;
+  position: fixed;
+  padding: 2%;
+  padding: 7px 16px 9px;
+  border: none;
+  opacity: 1;
+  margin: 10px;
+  }
+
+  .mat-button {
+    background-color: #00498E;
+  }
+
+  /*ViewCarePlan styles..*/
+
+.accordion {
+	max-width: 700px;
+	margin: 100px auto;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.accordion .item {
+	box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	cursor: pointer;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	column-gap: 24px;
+	row-gap: 32px;
+	border-top: 4px solid transparent;
+	align-items: center;
+	transition: border-top 0.3s;
+}
+
+.accordion .number {
+	color: #ced4da;
+}
+.accordion .number,
+.accordion .text {
+	font-size: 16px;
+	font-weight: 600;
+	
+}
+
+.accordion .text2 {
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.goals{
+	z-index: 999;
+	float:right; 
+	margin-right:960px; 
+    color: #00498E;
+    letter-spacing: 0.15rem;
+    font: normal normal 500 2.5rem Gill sans;
+}
+
+.cp{
+	z-index: 999;
+	float:right; 
+	margin-right:650px; 
+    color: #00498E;
+    letter-spacing: 0.15rem;
+    font: normal normal 500 2.5rem Gill sans;
+}
+
+.arrow_forward{
+	color: rgb(3, 3, 3); 
+	font-size: 25px;
+}
+.restaurant{
+	font-size: 27px; 
+	color: rgb(247, 91, 91);
+}
+
+/*reading cards..*/
+.cards{
+  display:flex; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 8px;
+ /* height: 220px;
+  width: 230px;*/
+  text-align: center;
+  position: relative; 
+  display:block;
+}
+
+.cardsss{
+
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3px;
+  text-align: center;
+}
+
+.flex-container {
+  /*background-color: whitesmoke !important;
+    display: flex;
+  overflow-x: scroll;
+  float: right;
+  margin-right: 150px;*/
+  display: flex;
+  overflow-x: scroll;
+  float: left;
+  margin-left: 130px;
+  width: 950px;
+}
+
+/*add dialog buttons popup!*/
+.flex-container-on {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  float: left;
+  margin-left: 150px;
+  margin-top: -250px;
+  width: 165px;
+  height: 80%;
+  background-color: white;
+  top:0
+}
+
+
+/*
+.cards{
+  display:flex; 
+  overflow-x: scroll;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  height: 220px;
+  width: 230px;
+  text-align: center;
+  position: relative; 
+  display:block;
+}
+
+.flex-container {
+  background-color: whitesmoke !important;
+  display: flex;
+  overflow-y: scroll;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 250px;
+  width: 100%;
+  /*float: right;
+  margin-right: 50px.;
+  padding: 15px;
+  justify-content: space-around; 
+}
+
+
+*/
+
+@media screen and (min-width: 300px) and (max-width:800px) {
+  .column {
+    width: 97%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .proBox {
+    width: 250px;
+    margin: 80px;
+    top: -70px;
+    right: 50px;
+  }
+  .container-fluid {
+    margin-left: 20px;
+    width: 70%;
+  }
+
+  body {
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 250%;
+    width: 100%;
+    left: 0;
+  }
+
+  .card {
+    width: 200%;
+  }
+
+  .container .cont {
+    width: 200%;
+  }
+
+  /*Common Care Plan..*/
+  .courses-container {
+    width: 90%;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    margin-right: -30px;
+  }
+  
+  .course {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    max-width: 100%;
+    margin: 20px;
+    overflow: hidden;
+    width: 700px;
+    height: 150px;
+  }
+  
+  .course-preview {
+    background-color: #2A265F;
+    color: #fff;
+    padding: 10px;
+    max-width: 250px;
+  }
+  
+  .course-info {
+    padding: 1px;
+    width: 20%;
+    height: 50%;
+    margin-top: 120px;
+ 
+  }
+  
+  .user{
+    font-size:70px; text-align: center; color: #4a4b4b;
+  }
+  
+  .btnoh {
+    background-color: #2A265F;
+    border: 0;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 16px;
+    top: 0px;
+    float: right;
+    margin-right: -130px;
+    margin-top: -25px;
+  }
+
+  .ccp{
+    margin-top: -120px;
+  }
+
+  .cards{
+    display:flex; 
+    overflow-x: scroll;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    height: 220px;
+    width: 200px;
+    text-align: center;
+    position: relative; 
+    display:block;
+  }
+  
+  .flex-container {
+    background-color: white !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 100%;
+    float: right;
+    margin-right: -70px;
+    padding: 15px;
+    justify-content: space-around; 
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width:800px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .proBox {
+    width: 250px;
+    margin: 80px;
+    top: -70px;
+    right: 10px;
+  }
+  .container-fluid {
+    margin-left: 20px;
+    width: 70%;
+  }
+
+  body {
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 250%;
+    width: 100%;
+    left: 0;
+  }
+  .cards{
+    display:flex; 
+    overflow-x: scroll;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    height: 220px;
+    width: 200px;
+    text-align: center;
+    position: relative; 
+    display:block;
+  }
+  
+  .flex-container {
+    background-color: white !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 100%;
+    float: right;
+    margin-right: -200px;
+    padding: 15px;
+    justify-content: space-around; 
+  }
+
+}
+
+@media screen and (min-width: 425px) and (max-width:800px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .proBox {
+    width: 250px;
+    margin: 80px;
+    top: -70px;
+    right: 10px;
+  }
+  .container-fluid {
+    margin-left: 20px;
+    width: 70%;
+  }
+
+  body {
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 250%;
+    width: 100%;
+    left: 0;
+  }
+
+  .cards{
+    display:flex; 
+    overflow-x: scroll;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    height: 220px;
+    width: 200px;
+    text-align: center;
+    position: relative; 
+    display:block;
+  }
+  
+  .flex-container {
+    background-color: white !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 100%;
+    float: right;
+    margin-right: -200px;
+    padding: 15px;
+    justify-content: space-around; 
+  }
+}
+
+/* Media css for cards above 768px Tablets */
+@media screen and (min-width: 768px) and (max-width:800px) {
+  .column {
+    width: 70%;
+    padding: 0 10px;
+  }
+
+  body {
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 250%;
+    width: 100%;
+    left: 0;
+  }
+
+  .proBox {
+    width: 250px;
+    margin: 80px;
+    top: -70px;
+    right: -20px;
+  }
+  .container-fluid {
+    margin-left: 60px;
+    width: 100%;
+  }
+
+  .card {
+    width: 130%;
+  }
+
+
+  .container .cont {
+    width: 90%;
+  }
+
+  /*Common Care Plan..*/
+  .courses-container {
+    width: 90%;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    margin-right: 10px;
+  }
+  
+  .course {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    max-width: 100%;
+    margin: 20px;
+    overflow: hidden;
+    width: 700px;
+    height: 150px;
+  }
+  
+  .course-preview {
+    background-color: #2A265F;
+    color: #fff;
+    padding: 10px;
+    max-width: 250px;
+  }
+  
+  .course-info {
+    padding: 1px;
+    width: 20%;
+    height: 50%;
+    margin-top: 80px;
+ 
+  }
+  
+  .user{
+    font-size:70px; text-align: center; color: #4a4b4b;
+  }
+  
+  .btnoh {
+    background-color: #2A265F;
+    border: 0;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 16px;
+    top: 0px;
+    float: right;
+    margin-right: -400px;
+    margin-top: -25px;
+  }
+
+  .ccp{
+    margin-top: -70px;
+  }
+
+  .cards{
+    display:flex; 
+    overflow-x: scroll;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    height: 220px;
+    width: 200px;
+    text-align: center;
+    position: relative; 
+    display:block;
+  }
+  
+  .flex-container {
+    background-color: whitesmoke !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 100%;
+    float: right;
+    margin-right: -10px;
+    padding: 15px;
+    justify-content: space-around; 
+  }
+
+}
+
+/* Media css for cards above 1024px */
+@media screen and (min-width: 1024px) and (max-width:1050px) {
+  .column {
+    width: 20%;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .proBox {
+    width: 250px;
+    margin: 80px;
+    top: -70px;
+    right: 120px;
+  }
+  .container-fluid {
+    margin-left: 60px;
+    width: 140%;
+  }
+
+  body {
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 250%;
+    width: 100%;
+    left: 0;
+  }
+  .cards{
+    display:flex; 
+    overflow-x: scroll;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    height: 220px;
+    width: 200px;
+    text-align: center;
+    position: relative; 
+    display:block;
+  }
+  
+  .flex-container {
+    background-color: whitesmoke !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 100%;
+    float: right;
+    margin-right: -10px;
+    padding: 15px;
+    justify-content: space-around; 
+  }
+
+}
+
+/* Media css for cards above 2560px */
+@media screen and (min-width: 2560px) and (max-width:2600px) {
+  .column {
+    width: 25%;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .proBox {
+    width: 350px;
+    margin: 100px;
+    top: -70px;
+    right: 130px;
+  }
+
+  body {
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 250%;
+    width: 100%;
+    left: 0;
+  }
+
+
+}
+
+/*For inspect M.. CSS*/
+@media screen and (min-width: 800px) and (max-width:990px) {
+
+  .proBox {
+    width: 250px;
+    margin: 80px;
+    top: -70px;
+    right: 120px;
+  }
+  .container-fluid {
+    margin-left: 60px;
+    width: 160%;
+  }
+  .courses-container {
+    width: 80%;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    margin-right: 30px;
+  }
+  .flex-container {
+    background-color: whitesmoke !important;
+    display: flex;
+    overflow-x: scroll;
+    float: right;
+    margin-right: 30px;
+  }
+
+  
+  /*  .cards{
+    display:flex; 
+    overflow-x: scroll;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    height: 220px;
+    width: 200px;
+    text-align: center;
+    position: relative; 
+    display:block;
+  }
+  
+  .flex-container {
+    background-color: whitesmoke !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 100%;
+    float: right;
+    margin-right: -10px;
+    padding: 15px;
+    justify-content: space-around; 
+  }
+  */
+  
+}
+
+/*
+.conButton{
+  margin-right: -300px;
+  float: right;
+}
+
+.proBox {
+  width: 250px;
+  margin: 80px;
+  top: -70px;
+  right: 100px;
+}
+.container {
+  margin-left: 170px;
+  width: 95%;
+}
+
+*/
+
+
+
+
+/* Add Button   */
+.btnbtn{
+  width: 100px;
+  height: 53px;
+  bottom: 0;
+  right: 0;
+  float: right;
+  z-index: 999;
+  background: #078f8f;
+  color: white;
+  font: normal normal 550 1.3rem Gill sans;
+  border-radius: 8px;
+  position: fixed;
+  padding: 2%;
+  padding: 7px 16px 9px;
+  border: none;
+  opacity: 1;
+  margin: 10px;
+  }
+
+  #addIcon{
+    color: white; 
+    margin-top: -16px; 
+    margin-right: 0px;
+    width: 33%;
+  }

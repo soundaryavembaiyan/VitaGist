@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <!-- <p class="home mt-5">Care Plan Menu's</p>
+    <br> --> 
+
+   <p class="cp mt-3"> Care Plan's</p>
+    <div class="accordion">
+<!-- GOAL --> 
+
+		<p class="goals">Goals</p>
+
+		<div *ngFor="let item of goal">
+        <div class="item">
+            <!-- <i class="fa fa-universal-access number"></i> 
+			<span>{{num+1}}</span>-->
+			<i class="fa fa-eercast" aria-hidden="true"></i>
+            <b class="text">{{item.goalType}}</b>
+			<p class="text2">{{item.presentText}}</p>
+        </div>
+		</div><br>
+<!-- DIET --> 
+
+		<p class="goals">Diet</p>
+		<div class="container cont">
+
+			 <div class="mat-tab">
+			  <table>
+				<tr>
+				  <th class="content">Diet</th>
+				  <th class="content">...</th>
+				  <th class="content">...</th>
+				</tr>
+	
+            <tr class="box" *ngFor="let item of diet">
+             <td> <mat-icon class="restaurant"> restaurant</mat-icon> </td> 
+              <td>{{item.title}}</td>
+              <td>{{item.qty}}&nbsp;{{item.unit}}</td>
+			</tr>
+
+			  </table>
+			</div> 
+
+			<!-- <div class="row">
+				<div class="column" *ngFor="let item of diet">
+				  <mat-card class="card">
+					<mat-card-title>
+					  <a class="proBox">
+						<i class="fa fa-address-book" aria-hidden="true"
+						style="color:#034261;"></i> <br>
+						
+
+						<p class="card-title">{{item.title}}</p>
+						<p>{{item.qty}}&nbsp;{{item.unit}}</p>
+
+					  </a>
+					</mat-card-title>
+				  </mat-card>
+				</div>
+			</div> -->
+		</div><br>
+<!-- EXERCISE --> 
+
+		<div class="goals" >Exercise
+			<button (click)="openDialog()"><i class="fa fa-plus-circle" style="font-size: 45px; color: rgb(6, 5, 5); margin-top: -45px; 
+			float:right; margin-right: -200px;"></i>
+			</button>
+		</div>
+
+		<div class="container cont">
+        <div class="mat-tab">
+			<table>
+			  <tr>
+				<th class="content">Title</th>
+				<th class="content">Steps</th>
+				<th class="content">Actions</th>
+			  </tr>
+			  <tr class="box" *ngFor="let ex of exercise">
+				<td>{{ex.title}}</td> 
+				<td *ngIf="ex.distance!=0">{{ex.distance}}&nbsp;{{ex.distanceUnit}}</td>
+				<td *ngIf="ex.distance==0">{{ex.weight}}&nbsp;{{ex.weightUnit}}</td>
+
+				<td>
+				<!--<button> 
+						<mat-icon class="arrow_forward">arrow_forward_ios</mat-icon>
+					 </button>-->
+
+					 <button>
+						<mat-icon style="font-size: 25px; margin: 5px;" (click)="editDialog(ex.id)">edit</mat-icon>
+						<mat-icon style="font-size: 25px; margin: 5px;" (click)="deleteDialog(ex.id)">delete</mat-icon>
+					</button>  
+					
+					<!--<mat-menu #menu="matMenu">
+	
+						<button mat-menu-item >
+						  <mat-icon style="font-size: 25px;">edit</mat-icon>
+						  <span style="font-size:20px">Edit</span>
+						</button>
+	  
+						<button mat-menu-item>
+						  <mat-icon style="font-size: 25px;">delete</mat-icon>
+						  <span style="font-size:20px">Delete</span>
+						</button>
+					</mat-menu>-->
+
+				</td>
+			  </tr><br>
+			</table>
+		  </div></div>
+<!-- MEDICATIONS--> 
+
+		<p class="goals">Medications</p>
+  
+    </div><br>
+
+
+<!--GoBack button-->
+<div class="pull-right">
+	<button class="btnbtn2" [routerLink]="['/careplan']"> GoBack
+	  <i class="fa fa-backward" style="color: white; margin-top: -16px; margin-right: -10px;width: 30%;" aria-hidden="true"></i>
+   </button>
+</div>
+<!--GoBack button ends here..-->
+
+</body>
+</html>

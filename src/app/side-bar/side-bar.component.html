@@ -1,0 +1,219 @@
+<html>
+
+<body>
+    <nav>
+
+        <ul>
+            <li>
+                <a href="https://vitagist.com/" class="logo">
+                    <img src="../../assets/vg.png" style="margin-left: -10px;" alt="">
+                    <!-- <div class="nav-item">
+                        <span style="color:#004D87; font-weight: 500; font-size: 25px;">Vita</span> 
+                        <span style="color: orangered; font-weight: 500; font-size: 25px;">Gist</span>
+                    </div>  -->
+                </a>
+                <!-- <span style="color:#004D87; font-weight: 500; font-size: 23px;">V</span>
+                <span style="color: orangered; font-weight: 500; font-size: 23px;">G</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/side-bar" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                     #tooltip="matTooltip"  matTooltip="HOME"  matTooltipPosition="right">home</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Home</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/document" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                    #tooltip="matTooltip"  matTooltip="DOCUMENTS"  matTooltipPosition="right">library_books</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="margin-left: 4px; color:#004D87">Document</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/connections" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                    #tooltip="matTooltip"  matTooltip="CONNECTIONS"  matTooltipPosition="right">group_add</mat-icon>
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/health" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                    #tooltip="matTooltip"  matTooltip="HEALTH"  matTooltipPosition="right">favorite_border</mat-icon>
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/chat" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                    #tooltip="matTooltip"  matTooltip="CHAT"  matTooltipPosition="right">chat</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Settings</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/profile" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                    #tooltip="matTooltip"  matTooltip="PROFILE"  matTooltipPosition="right">account_circle</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Profile</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/settings" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                    #tooltip="matTooltip"  matTooltip="SETTINGS"  matTooltipPosition="right">settings</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Settings</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/notifications" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                    #tooltip="matTooltip"  matTooltip="NOTIFICATIONS"  matTooltipPosition="right">notifications_active</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Notifications</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/reminder" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                    #tooltip="matTooltip"  matTooltip="REMINDERS"  matTooltipPosition="right">query_builder</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Reminders</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/audit" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 38px; height: 31px;"
+                    #tooltip="matTooltip"  matTooltip="AUDIT TRAILS"  matTooltipPosition="right">history</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Reminders</span> -->
+            </li>
+
+
+            <li>
+                <a routerLink="/logout" id="logoo" class="logout">
+                    <mat-icon style=" margin-left: -10px; width: 40px; height: 30px;"
+                    #tooltip="matTooltip"  matTooltip="LOGOUT"  matTooltipPosition="right">exit_to_app</mat-icon><br><br>
+                    <!-- <p style="color:#004D87; font-size: 18px; font-weight: 500; margin-top: 30px; margin-left: -42px;"> Logout</p> -->
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+    <!--Nav ends here-->
+
+    <p class="home mt-5">Home</p>
+    <br>
+
+    <!-- <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <a class="proBox" [routerLink]="['/document']">
+                    <i class="fa fa-clone" style="color:#034261; font-size:70px"></i> <br><br>
+                    <h3 class="h"> <b style="font-family: 'Gill Sans'; font-size: 20px; font-weight: 600;"> Document </b> </h3>
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <a class="proBox" [routerLink]="['/connections']">
+                    <i class="fa fa-users" style="color:#034261; font-size:70px;"></i> <br><br>
+                    <h3 class="h"> <b style="font-family: 'Gill Sans';font-size: 20px; font-weight: 600;"> Connections </b> </h3>
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <a class="proBox" [routerLink]="['/settings']">
+                    <i class="fa fa-cog" style="color:#034261; font-size:70px;"></i> <br><br>
+                    <h3 class="h"> <b style="font-family: 'Gill Sans';font-size: 20px; font-weight: 600;"> Settings </b> </h3>
+                </a>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="row">
+        <div class="column">
+            <div class="card" style="margin-top: 20px;">
+
+                <div class="container">
+                    <a class="proBox" [routerLink]="['/document']">
+                        <i class="fa fa-clone" style="color:#034261; font-size:70px"></i> <br><br>
+                        <h3 class="h"> <b style="font-family: 'Gill Sans'; font-size: 20px; font-weight: 600;"> Document </b> </h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 20px;">
+
+                <div class="container">
+                    <a class="proBox" [routerLink]="['/connections']">
+                        <i class="fa fa-users" style="color:#034261; font-size:70px;"></i> <br><br>
+                        <h3 class="h"> <b style="font-family: 'Gill Sans';font-size: 20px; font-weight: 600;"> Connections </b> </h3>
+                    </a>
+                </div>
+            </div>
+
+           
+
+            <div class="card" style="margin-top: 20px;">
+
+                <div class="container">
+                    <a class="proBox" [routerLink]="['/settings']">
+                        <i class="fa fa-cog" style="color:#034261; font-size:70px;"></i> <br><br>
+                        <h3 class="h"> <b style="font-family: 'Gill Sans';font-size: 20px; font-weight: 600;"> Settings </b> </h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>  -->
+
+    <div class="container">
+        <div class="card card-1" [routerLink]="['/document']" style="height: 325px; margin-right: 50px;">
+          <div class="card-header">
+            <p>Documents</p>
+          </div>
+          <div class="card-body">
+            <div class="buy-btn">
+                <i class="fa fa-file-text"  style="color:#034261; font-size:90px; padding: 13px;"></i>
+                <!--file-text-o--> 
+            </div>
+          </div>
+        </div>
+        
+         <div class="card card-1" [routerLink]="['/connections']" style="height: 300px; margin-right: 50px;">
+          <div class="card-header">
+            <p>Connections</p>
+          </div>
+          <div class="card-body">
+            <div class="buy-btn">
+                    <i class="fa fa-users"  style="color:#034261; font-size:90px;"></i> 
+            </div>
+          </div>
+        </div>
+        
+         <div class="card card-1" [routerLink]="['/health']" style="height: 325px; margin-right: 50px;">
+          <div class="card-header">
+            <p>Health</p>
+          </div>
+          <div class="card-body">
+            <div class="buy-btn">
+               <i class="fa fa-heartbeat"  style="color:#034261; font-size:90px;  padding: 13px;"></i>
+            </div>
+          </div>
+        </div>
+         
+    </div>
+
+      
+</body>
+</html>
