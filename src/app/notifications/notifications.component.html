@@ -1,0 +1,184 @@
+<p>notifications works!</p>
+<html>
+
+<body>
+    <nav>
+
+        <ul>
+            <li>
+                <a href="https://vitagist.com/" class="logo">
+                    <img src="../../assets/vg.png" style="margin-left: -10px;" alt="">
+                    <!-- <div class="nav-item">
+                        <span style="color:#004D87; font-weight: 500; font-size: 25px;">Vita</span> 
+                        <span style="color: orangered; font-weight: 500; font-size: 25px;">Gist</span>
+                    </div>  -->
+                </a>
+                <!-- <span style="color:#004D87; font-weight: 500; font-size: 23px;">V</span>
+                <span style="color: orangered; font-weight: 500; font-size: 23px;">G</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/side-bar" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                     #tooltip="matTooltip"  matTooltip="HOME"  matTooltipPosition="right">home</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Home</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/document" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                    #tooltip="matTooltip"  matTooltip="DOCUMENTS"  matTooltipPosition="right">library_books</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="margin-left: 4px; color:#004D87">Document</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/connections" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                    #tooltip="matTooltip"  matTooltip="CONNECTIONS"  matTooltipPosition="right">group_add</mat-icon>
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/health" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                    #tooltip="matTooltip"  matTooltip="HEALTH"  matTooltipPosition="right">favorite_border</mat-icon>
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/chat" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                    #tooltip="matTooltip"  matTooltip="CHAT"  matTooltipPosition="right">chat</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Settings</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/profile" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                    #tooltip="matTooltip"  matTooltip="PROFILE"  matTooltipPosition="right">account_circle</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Profile</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/settings" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                    #tooltip="matTooltip"  matTooltip="SETTINGS"  matTooltipPosition="right">settings</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Settings</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/notifications" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                    #tooltip="matTooltip"  matTooltip="NOTIFICATIONS"  matTooltipPosition="right">notifications_active</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Notifications</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/reminder" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                    #tooltip="matTooltip"  matTooltip="REMINDERS"  matTooltipPosition="right">query_builder</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Reminders</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/audit" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 38px; height: 31px;"
+                    #tooltip="matTooltip"  matTooltip="AUDIT TRAILS"  matTooltipPosition="right">history</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Reminders</span> -->
+            </li>
+
+
+            <li>
+                <a routerLink="/logout" id="logoo" class="logout">
+                    <mat-icon style=" margin-left: -10px; width: 40px; height: 30px;"
+                    #tooltip="matTooltip"  matTooltip="LOGOUT"  matTooltipPosition="right">exit_to_app</mat-icon><br><br>
+                    <!-- <p style="color:#004D87; font-size: 18px; font-weight: 500; margin-top: 30px; margin-left: -42px;"> Logout</p> -->
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+<!--Nav ends here-->
+
+<!--Notification starts-->
+    <p class="home mt-5" >Notifications</p>
+    <br>
+
+
+    <!--Search button-->
+<div class="input-group justify-content-center">
+    <div class="form-outline">
+      <input type="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search.." size="30" id="form1" class="form-control" />
+    </div>
+    <button type="button" id="insearch" class="btn btn-primary text-bg-light">
+      <i class="fa fa-search"></i>
+    </button>
+  </div><br>
+  <!--Search button ends here..-->
+
+     <br>
+
+    <!-- <div class="container">
+       <div class="card"  *ngFor="let n of notify">
+        <div class="card-content">
+                 <h1 style="font-size: 20px;">Message</h1>
+          
+                    <p>{{n.message}}</p>
+
+                <button class="btnbtn" mat-button (click)="readNotify(id)"><mat-icon style="font-size: 20px; color: aliceblue;">spellcheck</mat-icon></button>
+                <button class="btnbtn" mat-button (click)="deleteNotify(id)"><mat-icon style="font-size: 20px; color: aliceblue;">delete</mat-icon></button>
+              
+        </div>
+       
+      </div>
+      
+    </div> -->
+      
+
+    <div class="container">
+        <table >
+          <tr>
+           
+            <th class="content">Message</th>
+            <th class="content">Delete</th>
+          </tr>
+          
+          <tr class="box" *ngFor="let n of notify | filter:searchText">
+           
+            <!-- <button>
+                <i class="fa fa-check-square-o" (click)="readNotify(n.id)" style="font-size: 27px; color: #1b8b35;"></i>
+            </button> -->
+          
+
+            <td style="font-size: 20px;">
+                <button>
+                    <i class="fa fa-check-square-o" (click)="readNotify(n.id)" style="font-size: 27px; color: #1b8b35;"></i>
+                </button>
+                
+               &nbsp;{{n.message}}
+            </td>
+            <td>
+
+                
+                <button>
+                    <mat-icon  mat-button (click)="deleteNotify(n.id)" style="font-size: 30px; color: #d11a2a;">delete_forever</mat-icon>
+                </button>
+                
+
+            </td>
+          </tr><br>
+        </table>
+      </div>
+
+</body>
+
+</html>

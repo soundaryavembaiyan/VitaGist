@@ -1,0 +1,18 @@
+<mat-card-content>
+
+  <div class="closeDelete">
+    <button (click)="closeDialog()" style="font-size: 20px; font-weight: 500;" mat-raised-button class="btn btn-warn"
+      color="warn" mat-mini-fab> X </button>
+  </div>
+
+  <h1 mat-dialog-title>Delete Document</h1>
+
+  <div mat-dialog-content style="font-size:24px">Are you sure you want to delete!.</div>
+  <br>
+  <div mat-dialog-actions>
+    <button mat-raised-button style="font-size:25px" class="btn btn-success" color="success" (click)="deleteRow()"
+      mat-dialog-close>Yes</button>
+    <button mat-raised-button style="font-size:25px" color="warn" mat-dialog-close>No</button>
+  </div>
+
+</mat-card-content>

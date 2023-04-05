@@ -1,0 +1,87 @@
+<mat-card-content>
+    <div class="closeEdit">
+       <button (click)="onNoClick()"
+         style="float: right;  font-size: 20px; font-weight: 500; margin-top: -18px;  margin-right: -18px;"
+         mat-raised-button class="btn btn-warn" color="warn" mat-mini-fab> X </button>
+     </div> 
+
+   <h1 mat-dialog-title style="font: normal normal 400 2rem Gill sans;">Medication</h1>
+
+<!--Form-->
+<div class="openDialog">
+
+<form [formGroup]="myForm">
+
+    <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+        <mat-label>Medical Condition</mat-label>
+        <mat-select placeholder="Condition Name" #medCondition required>
+          <mat-option *ngFor="let item of medical" [value]="item.name">
+            {{ item.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field><br>
+
+      <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+        <mat-label>Medication Name</mat-label>
+        <input type="text" matInput #medicationName placeholder="Medication Name" required>
+      </mat-form-field><br>
+
+      <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+        <mat-label>Strength</mat-label>
+        <input type="number" matInput #strength placeholder="Strength" required>
+      </mat-form-field><br>
+
+      <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+        <mat-label>Unit</mat-label>
+        <mat-select #unit placeholder="Condition Name" required>
+          <mat-option *ngFor="let item of unitz" [value]="item.name">
+            {{ item.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field><br>
+
+      <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>Start Date</mat-label>
+        <input matInput #startDate [matDatepicker]="picker" placeholder="Start Date" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field><br>
+
+      <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>End Date</mat-label>
+        <input matInput #endDate [matDatepicker]="picker" placeholder="End Date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field><br>
+
+      <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+        <mat-label>Frequency</mat-label>
+        <mat-select #frequency placeholder="Condition Name"  required>
+          <mat-option *ngFor="let item of frequencyz" [value]="item.name">
+            {{ item.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field><br>
+
+      <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+        <mat-label>Comment</mat-label>
+        <input type="text" #comment matInput placeholder="Enter your Comments">
+      </mat-form-field><br>
+
+
+<div mat-dialog-actions class="docBut pull-right">
+ <button mat-raised-button class="btn btn-success" type="submit" 
+ (click)="medicationEdit(medCondition.value ,medicationName.value, strength.value, unit.value, startDate.value, endDate.value, frequency.value, comment.value)" style="background-color: rgb(4, 140, 4)" cdkFocusInitial><b style="color: white;">Save</b>
+</button>
+
+<button mat-raised-button class="btn btn-danger" 
+(click)="delete_Medication(medCondition, medicationName, strength, unit, startDate, endDate, frequency, comment)" style="background-color: rgb(236, 11, 11)" cdkFocusInitial>
+ <b style="color: white;">Delete</b></button>
+</div>
+
+
+
+</form>
+</div>
+</mat-card-content>
+          

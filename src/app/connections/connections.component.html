@@ -1,0 +1,347 @@
+<html>
+    <head>
+        <title>CSS Cards</title>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" rel="stylesheet">  
+
+    </head>
+<body>
+  <nav>
+
+    <ul>
+        <li>
+            <a href="https://vitagist.com/" class="logo">
+                <img src="../../assets/vg.png" style="margin-left: -10px;" alt="">
+                <!-- <div class="nav-item">
+                    <span style="color:#004D87; font-weight: 500; font-size: 25px;">Vita</span> 
+                    <span style="color: orangered; font-weight: 500; font-size: 25px;">Gist</span>
+                </div>  -->
+            </a>
+            <!-- <span style="color:#004D87; font-weight: 500; font-size: 23px;">V</span>
+            <span style="color: orangered; font-weight: 500; font-size: 23px;">G</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/side-bar" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                 #tooltip="matTooltip"  matTooltip="HOME"  matTooltipPosition="right">home</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Home</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/document" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="DOCUMENTS"  matTooltipPosition="right">library_books</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="margin-left: 4px; color:#004D87">Document</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/connections" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="CONNECTIONS"  matTooltipPosition="right">group_add</mat-icon>
+            </a>
+        </li>
+
+        <li>
+            <a routerLink="/health" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="HEALTH"  matTooltipPosition="right">favorite_border</mat-icon>
+            </a>
+        </li>
+
+        <li>
+            <a routerLink="/chat" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="CHAT"  matTooltipPosition="right">chat</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Settings</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/profile" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="PROFILE"  matTooltipPosition="right">account_circle</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Profile</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/settings" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="SETTINGS"  matTooltipPosition="right">settings</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Settings</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/notifications" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="NOTIFICATIONS"  matTooltipPosition="right">notifications_active</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Notifications</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/reminder" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="REMINDERS"  matTooltipPosition="right">query_builder</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Reminders</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/audit" class="logo">
+                <mat-icon style="margin-left: -10px; width: 38px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="AUDIT TRAILS"  matTooltipPosition="right">history</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Reminders</span> -->
+        </li>
+
+
+        <li>
+            <a routerLink="/logout" id="logoo" class="logout">
+                <mat-icon style=" margin-left: -10px; width: 40px; height: 30px;"
+                #tooltip="matTooltip"  matTooltip="LOGOUT"  matTooltipPosition="right">exit_to_app</mat-icon><br><br>
+                <!-- <p style="color:#004D87; font-size: 18px; font-weight: 500; margin-top: 30px; margin-left: -42px;"> Logout</p> -->
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+<!--Nav ends here-->
+
+    <!-- <p class="home mt-5">Connections</p> -->
+    <div class="container mt-2">
+        <h1 class="docDoc">Connections</h1>
+    
+
+      <!--4 Cards..-->
+      <!-- Cards with media area -->
+      <div class="container-fluid row">
+        <div class="column">
+          <mat-card class="card" (click)="get_tags('Key_contacts')">
+            <mat-card-title>
+              <a class="proBox">
+                <i class="fa fa-user-plus" aria-hidden="true" style="color:#034261; font-size:70px; text-align: center;"></i> <br><br>
+                <h3> <b class="btag" style="font-family: 'Gill Sans'; font-size: 16px; font-weight: 600;">Key Contacts</b>
+                </h3>
+              </a>
+            </mat-card-title>
+          </mat-card>
+        </div>
+
+        <div class="column">
+          <mat-card class="card" (click)="get_tags('Personal')">
+            <mat-card-title>
+              <a class="proBox">
+                <i class="fa fa-users" aria-hidden="true" style="color:#034261; font-size:70px; text-align: center;"></i>
+                <br><br>
+                <h3> <b style="font-family: 'Gill Sans'; font-size: 16px; font-weight: 600;">Family & Friends</b></h3>
+              </a>
+            </mat-card-title>
+          </mat-card>
+        </div>
+
+        <div class="column">
+          <mat-card class="card" (click)="get_tags('Lauditor')">
+            <mat-card-title>
+              <a class="proBox">
+                <i class="fa fa-suitcase" aria-hidden="true" style="color:#034261; font-size:70px; text-align: center;"></i>
+                <br><br>
+                <h3> <b style="font-family: 'Gill Sans'; font-size: 16px; margin-left: -20px;font-weight: 600;">Legal & Finance</b></h3>
+              </a>
+            </mat-card-title>
+          </mat-card>
+        </div>
+
+        <div class="column">
+          <mat-card class="card" (click)="get_tags('ContentCoffer')">
+            <mat-card-title>
+              <a class="proBox">
+                <i class="fa fa-folder-open" aria-hidden="true" style="color:#034261; font-size:70px; text-align: center;"></i>
+                <br><br>
+                <h3> <b style="font-family: 'Gill Sans'; font-size: 16px; font-weight: 600;">Others</b></h3>
+              </a>
+            </mat-card-title>
+          </mat-card>
+        </div>
+
+
+      </div>
+      <!--5 Cards endz..-->
+      <br>
+       
+<div class="container cont">
+<table class="conButton">
+        <button class="act" (click)="open_bottom_dialog($event)">
+            <p class="actP"> 
+                Add Connection 
+            </p>
+        </button>
+
+        <button class="nonact" (click)="viewDoc()">
+            <p class="nonactP"> 
+                View Connection
+            </p>
+        </button>       
+</table>
+
+<table class="conButton" *ngIf="isClassExpand" class="bottom_dialog" (click)="$event.stopPropagation()" >
+  <div>
+    <!--Open Dialog is here..-->
+      <button class="act" (click)="openDialogFF()">
+        <p class="actP">  
+          Family & Friends </p>
+          <i class="fas fa-user-alt" style="font-size: 15px; color: white;"></i>
+      </button>
+
+      <button class="nonactnon column-1" (click)="openDialog()">
+        <p class="nonactPp">  
+          Key Contacts </p>
+          <i class="fas fa-user-plus" style="font-size: 15px; color: white;"></i>
+      </button>
+  </div>
+</table> 
+
+
+<!--Search button-->
+<div class="input-group justify-content-center" style="padding: 30px;">
+  <div class="form-outline">
+    <input type="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search.." size="30" id="form1" class="form-control" />
+  </div>
+  <button type="button" id="insearch" class="btn btn-primary text-bg-light">
+    <i class="fa fa-search"></i>
+  </button>
+</div><br>
+<!--Search button ends here..-->
+
+
+
+<div class="mat-tab" *ngIf="tag == 'Key_contacts'" >
+            <table>
+              <tr>
+                <th class="content">Entity Name</th>
+                <th class="content">Entity Address</th>
+                <th class="content">Action</th>
+              </tr>
+            
+              <tr class="box" *ngFor="let c of connection | filter:searchText">
+                <td>{{c.firm_name}}</td> 
+                <td>{{c.firm_address}}</td>
+  
+                <td>
+                  <button mat-button [matMenuTriggerFor]="menu" style="width: 110px;">
+                    <p class="action">
+                      Action  
+                    <mat-icon class="action2">arrow_drop_down</mat-icon>
+                  </button>
+
+                   <mat-menu #menu="matMenu"> 
+  
+                    <button mat-menu-item (click)="editItem(c.id)">
+                      <mat-icon style="font-size: 25px;">edit</mat-icon>
+                      <span style="font-size:20px">Edit</span>
+                    </button>
+  
+                    <button mat-menu-item (click)="deleteEntity(c.id)">
+                      <mat-icon style="font-size: 25px;">delete</mat-icon>
+                      <span style="font-size:20px">Delete</span>
+                    </button>
+
+                  </mat-menu>
+                </td>
+              </tr><br>
+            </table>
+      
+</div> 
+
+
+<div class="mat-tab" *ngIf="tag != 'Key_contacts'">
+
+   <table>
+    <tr>
+      <th class="content1">Name<mat-icon id="mat-swap">swap_vert</mat-icon></th>
+      <th class="content1">Status<mat-icon id="mat-swap">swap_vert</mat-icon></th>
+      <th class="content1">Action</th>
+
+    </tr>
+  
+    <tr class="box" *ngFor="let c of connection"><!--c of connection-->
+
+      <td>{{c.business_name}}</td> 
+      <td> 
+           <div class="Accepted" *ngIf="c.isaccepted">
+              <p class="contentP">Accepted</p> 
+           </div>
+
+           <div class="Accept-request" *ngIf ="c.isaccepted==false">
+            <button mat-raised-button class="btn btn-success contcont" type="submit" 
+                *ngIf="c.canAccept && !c.isaccepted" (click)="acceptRequest(c.id,c.biztype)">
+              <b class="contcont2">Accept</b>
+            </button>
+           </div>
+
+           <div class="Pending" *ngIf="!c.isaccepted">
+             <p class="contentP">Pending</p>
+           </div>
+      </td>
+
+      <td>
+        <button mat-button [matMenuTriggerFor]="menu" style="width: 110px;">
+          <p class="action">
+            Action  
+          <mat-icon class="action2">arrow_drop_down</mat-icon>
+        </button>
+
+         <mat-menu #menu="matMenu"> 
+
+          <button mat-menu-item>
+            <mat-icon style="font-size: 25px;">sms</mat-icon>
+            <span style="font-size:20px">Message</span>
+          </button>
+
+          <button mat-menu-item>
+            <mat-icon style="font-size: 25px;">near_me</mat-icon>
+            <span style="font-size:20px">Share</span>
+          </button>
+
+        </mat-menu>
+      </td>
+
+    </tr><br>
+  </table>
+
+  <!-- <table>
+    <mat-card-footer *ngIf ="c.isaccepted==false">
+                      
+      <button *ngIf="c.canAccept && !c.isaccepted " (click)="acceptRequest(c.id,c.biztype)">
+          Accept
+      </button>
+
+      <div *ngIf="!c.canAccept && !c.isaccepted" class="accept-button">
+        Pending
+      </div>
+      
+    </mat-card-footer>
+  </table> -->
+
+</div>
+
+
+        
+
+  </div>  
+  </div>
+
+
+       
+</body>
+</html>

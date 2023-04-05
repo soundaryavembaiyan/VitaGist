@@ -1,0 +1,222 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.left-col {
+  height: 100vh;
+  margin-top: -20px;
+  background-color: #333738;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.left-col .cont {
+  display: grid;
+  text-align: center;
+}
+
+.right-col{
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding-bottom: 35px;
+  height: 100vh;
+}
+
+.right-col .cont {
+  width: 80%;
+}
+
+.button {
+    background-color:#1976d2;
+    border: none;
+    color: white;
+    
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+   
+  }
+  .button1 {
+    border-radius: 12px;
+    color: white;
+  }
+  
+button:hover{
+    
+    color: #fff;
+}
+
+h3{
+  text-align: center;
+}
+
+.error{
+    color: red;
+}
+
+.inn{
+  font: normal normal 600 1.2rem Gill sans;
+}
+
+.text-center{
+font-family:  serif;
+font-size: 40px;
+font-style: normal;
+color: rgb(2, 35, 40);
+}
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  input[type=text], select, textarea {
+    
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  input[type=password], select, textarea {
+    
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color: black;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+ 
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  
+
+
+
+.hide {
+  display: none;
+}
+.inner-addon { 
+    position: relative; 
+}
+.inner-addon .far, .inner-addon .fas {
+  position: absolute;
+  padding: 10px 30px;
+  z-index: 100;
+  cursor: pointer;
+}
+.left-addon .far, .left-addon .fas  { left:  0px; }
+.right-addon .far, .right-addon .fas { right: 0px; }
+
+
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  display: flex;
+  transition: all 0.5s ease;
+  margin: 20px 0 0 250px;
+}
+
+
+@media screen and (max-width: 600) {
+  .col-25, .col-75, input[type=submit], .example {
+    width: 200%;
+    margin-top: 0;
+  }
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #1c87f1;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 20px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-right: -100px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  color: white;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>View Document</h1>
+
+<div class="closeView">
+  <button (click)="closeDialog()" style="font-size: 20px; font-weight: 500;" mat-raised-button class="btn btn-warn"
+    color="warn" mat-mini-fab> X </button>
+</div>
+
+
+<div class="containerView">
+  <iframe class="responsive-iframe" [src]="url | safeurl" frameborder="0"
+    style="height:100%; width: 100%; padding: 0.8rem;"></iframe>
+</div>

@@ -1,0 +1,11 @@
+<mat-card class="card">
+    <div class="container">
+
+        <div class="imgClass">
+            <i (click)="dialogAdd()" class="{{card_image[0]}}" [style]="card_image[1]"></i>
+        </div>
+
+        <p class="device" style="font-size:9px; padding-top: 8px;">{{ card_details.device.category.name }}</p>
+        
+    </div>
+</mat-card>

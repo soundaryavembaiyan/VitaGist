@@ -1,0 +1,68 @@
+
+<mat-card-content>
+    <div class="closeEdit">
+       <button (click)="onNoClick()"
+         style="float: right;  font-size: 20px; font-weight: 500; margin-top: -18px;  margin-right: -18px;"
+         mat-raised-button class="btn btn-warn" color="warn" mat-mini-fab> X </button>
+     </div> 
+
+   <h1 mat-dialog-title style="font: normal normal 400 2rem Gill sans;">Manual Devices</h1><br>
+
+<!--Form-->
+<div class="openDialog">
+<div class="allWrapper">
+  <form [formGroup]="myForm">
+
+  <section class="secClass">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="cardBox" >
+                 
+                    <div class="card_content">
+                    
+                      <div class="quiz_card_title" *ngFor="let item of device_names">
+
+                        <mat-checkbox color="primary" formControlName="{{item.title}}">
+                          <button style="background-color:  #d6d6d6;">
+                            <i style="font-size: 25px; margin-bottom: -50px;" class="{{item.image[0]}}"></i>
+                          </button>&nbsp;&nbsp;
+                         {{item.title }}
+                        </mat-checkbox>
+                        
+                      </div>
+                    </div>
+
+                </div>
+              </div>
+
+
+      <!--Save Button...-->
+              <div class="col-sm-12">
+                <div class="quiz_next">
+                  <button class="quiz_continueBtn" (click)="saveDevices()">
+                  <b class="saveButton">Save</b>
+                </button>
+                </div>
+              </div>
+      <!--Save Button ends here...--> 
+
+            </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </form>
+</div>
+
+
+
+ 
+</div>
+</mat-card-content>

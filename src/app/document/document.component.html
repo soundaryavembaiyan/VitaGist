@@ -1,0 +1,332 @@
+<body>
+  <nav>
+
+    <ul>
+        <li>
+            <a href="https://vitagist.com/" class="logo">
+                <img src="../../assets/vg.png" style="margin-left: -10px;" alt="">
+                <!-- <div class="nav-item">
+                    <span style="color:#004D87; font-weight: 500; font-size: 25px;">Vita</span> 
+                    <span style="color: orangered; font-weight: 500; font-size: 25px;">Gist</span>
+                </div>  -->
+            </a>
+            <!-- <span style="color:#004D87; font-weight: 500; font-size: 23px;">V</span>
+            <span style="color: orangered; font-weight: 500; font-size: 23px;">G</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/side-bar" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                 #tooltip="matTooltip"  matTooltip="HOME"  matTooltipPosition="right">home</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Home</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/document" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="DOCUMENTS"  matTooltipPosition="right">library_books</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="margin-left: 4px; color:#004D87">Document</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/connections" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="CONNECTIONS"  matTooltipPosition="right">group_add</mat-icon>
+            </a>
+        </li>
+
+        <li>
+            <a routerLink="/health" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="HEALTH"  matTooltipPosition="right">favorite_border</mat-icon>
+            </a>
+        </li>
+
+        <li>
+            <a routerLink="/chat" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="CHAT"  matTooltipPosition="right">chat</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Settings</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/profile" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="PROFILE"  matTooltipPosition="right">account_circle</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Profile</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/settings" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="SETTINGS"  matTooltipPosition="right">settings</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Settings</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/notifications" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="NOTIFICATIONS"  matTooltipPosition="right">notifications_active</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Notifications</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/reminder" class="logo">
+                <mat-icon style="margin-left: -10px; width: 40px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="REMINDERS"  matTooltipPosition="right">query_builder</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Reminders</span> -->
+        </li>
+
+        <li>
+            <a routerLink="/audit" class="logo">
+                <mat-icon style="margin-left: -10px; width: 38px; height: 31px;"
+                #tooltip="matTooltip"  matTooltip="AUDIT TRAILS"  matTooltipPosition="right">history</mat-icon>
+            </a>
+            <!-- <span class="nav-item" style="color:#004D87">Reminders</span> -->
+        </li>
+
+
+        <li>
+            <a routerLink="/logout" id="logoo" class="logout">
+                <mat-icon style=" margin-left: -10px; width: 40px; height: 30px;"
+                #tooltip="matTooltip"  matTooltip="LOGOUT"  matTooltipPosition="right">exit_to_app</mat-icon><br><br>
+                <!-- <p style="color:#004D87; font-size: 18px; font-weight: 500; margin-top: 30px; margin-left: -42px;"> Logout</p> -->
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+    <!--Nav ends here-->
+
+
+    <div class="container mt-1">
+      <h1 class="docDoc">Documents</h1>
+
+      <!--5 Cards..-->
+      <!-- Cards with media area -->
+      <div class="row">
+        <div class="column">
+          <mat-card class="card" (click)="get_tags('Identity')">
+            <mat-card-title>
+              <a class="proBox">
+                <i class="fa fa-address-book" aria-hidden="true"
+                style="color:#034261; font-size:70px; text-align: center;"></i> <br><br>
+                <h3> <b class="btag" style="font-family: 'Gill Sans'; font-size: 18px; font-weight: 600;">Identity</b>
+                </h3>
+              </a>
+            </mat-card-title>
+          </mat-card>
+        </div>
+
+        <div class="column">
+          <mat-card class="card" (click)="get_tags('Health')">
+            <mat-card-title>
+              <a class="proBox">
+                <i class="fa fa-medkit" aria-hidden="true"
+                style="color:#034261; font-size:70px; text-align: center;"></i>
+                <br><br>
+                <h3> <b style="font-family: 'Gill Sans'; font-size: 18px; font-weight: 600;">Health</b></h3>
+              </a>
+            </mat-card-title>
+          </mat-card>
+        </div>
+
+        <div class="column">
+          <mat-card class="card" (click)="get_tags('LegalFinance')">
+            <mat-card-title>
+              <a class="proBox">
+                <i class="fa fa-suitcase" aria-hidden="true"
+                style="color:#034261; font-size:70px; text-align: center;"></i>
+                <br><br>
+                <h3> <b style="font-family: 'Gill Sans'; font-size: 17px; margin-left: -20px;font-weight: 600;">Legal & Finance</b></h3>
+              </a>
+            </mat-card-title>
+          </mat-card>
+        </div>
+
+        <div class="column">
+          <mat-card class="card" (click)="get_tags('Personal')">
+            <mat-card-title>
+              <a class="proBox">
+                <i class="fa fa-users" aria-hidden="true"
+                style="color:#034261; font-size:70px; text-align: center;"></i>
+                <br><br>
+                <h3> <b style="font-family: 'Gill Sans'; font-size: 18px; font-weight: 600;">Personal</b></h3>
+              </a>
+            </mat-card-title>
+          </mat-card>
+        </div>
+
+        <div class="column">
+          <mat-card class="card" (click)="get_tags('Others')">
+            <mat-card-title>
+              <a class="proBox">
+                <i class="fa fa-folder-open" aria-hidden="true"
+                style="color:#034261; font-size:70px; text-align: center;"></i> <br><br>
+                <h3><b style="font-family: 'Gill Sans'; font-size: 18px; font-weight: 600;">Others</b></h3>
+              </a>
+            </mat-card-title>
+          </mat-card>
+        </div>
+
+      </div>
+      <!--5 Cards endz..-->
+      <br>
+      
+<!--Doc. Upload button-->
+<div class="container cont">
+
+        <table class="conButton">
+          <button class="act"(click)="openDialogAll()" >
+              <p style="font-size:19px; color:white; font-weight: 350;text-align: center;"> 
+                  Add Documents
+              </p>
+          </button>
+          <button class="nonact" (click)="viewDocs()">
+              <p style="font-size:19px; color:black; font-weight: 350;text-align: center;"> 
+                  View Documents
+              </p>
+          </button>
+       </table><br>
+<!--Doc. Upload button ends here-->
+
+
+<!--Search button-->
+    <div class="input-group justify-content-center">
+      <div class="form-outline">
+        <input type="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search.." size="30" id="form1" class="form-control" />
+      </div>
+      <button type="button" id="insearch" class="btn btn-primary text-bg-light">
+        <i class="fa fa-search"></i>
+      </button>
+    </div><br>
+<!--Search button ends here..-->
+
+
+        <!--  Doc-Upload  
+        <div class="pull-right">
+          <div class="text-center doc">
+              <!--  Dialog box(Upload)  
+            <button class="btnbtn" (click)="openDialogAll()"> Upload
+                <mat-icon style="color: white; margin-top: -30px;margin-right: -20px;width: 50%;">cloud_upload</mat-icon> 
+            </button>
+          </div>
+        </div>-->
+        
+         <!-- TABLE Tags are = Identity  -->
+
+        <div class="mat-tab" *ngIf="tag == 'Identity'">
+          <table>
+            <tr>
+              <th class="content">Document Name</th>
+              <th class="content">Uploaded on</th>
+              <th class="content">Doc id</th>
+              <th class="content">Expiry date</th>
+              <th class="content">Action</th>
+            </tr>
+            <tr class="box" *ngFor="let doc of docs | filter:searchText">
+              <td>{{doc.doctype}}</td> 
+              <td>{{doc.created}}</td>
+              <td>{{doc.docid}}</td>
+              <td>{{doc.expiration_date}}</td>
+
+              <td>
+                <button mat-button [matMenuTriggerFor]="menu" style="width: 110px;">
+                  <p style="color: white; height: 38px; font-weight: 500; font-family: 'Gill Sans';font-size: 18px;">
+                    Action
+                    <mat-icon class="action2">arrow_drop_down</mat-icon>
+                </button>
+
+                <mat-menu #menu="matMenu">
+
+                  <button mat-menu-item (click)="editItem(tags, doc.docid, doc.doctype)">
+                    <mat-icon style="font-size: 25px;">edit</mat-icon>
+                    <span style="font-size:20px">Edit</span>
+                  </button>
+
+                  <button mat-menu-item (click)="deleteItem(doc.doctype)">
+                    <mat-icon style="font-size: 25px;">delete</mat-icon>
+                    <span style="font-size:20px">Delete</span>
+                  </button>
+
+                  <button mat-menu-item (click)="viewItem(doc.doctype,doc.url)">
+                    <mat-icon style="font-size: 25px;">visibility</mat-icon>
+                    <span style="font-size:20px">View</span>
+                  </button>
+
+                  <button mat-menu-item (click)="download_credential(doc.doctype)">
+                    <mat-icon style="font-size: 25px;">save_alt</mat-icon>
+                    <span style="font-size:20px">Download</span>
+                  </button>
+
+                </mat-menu>
+              </td>
+            </tr><br>
+          </table>
+        </div>
+
+         <!--  TABLE Tags are != Identity  -->
+
+        <div class="mat-tab" *ngIf="tag != 'Identity'">
+          <table>
+            <tr>
+              <th>Document Name</th>
+              <th>Uploaded on</th>
+              <th>Description</th>
+              <th>Expiry date</th>
+              <th>Action</th>
+            </tr>
+            <tr class="box" *ngFor="let doc of docs | filter:searchText">
+              <td>{{doc.name}}</td>
+              <td>{{doc.created}}</td>
+              <td>{{doc.description}}</td>
+              <td>{{doc.expiration_date}}</td>
+
+              <td>
+                <button mat-button [matMenuTriggerFor]="menu" style="width: 110px;">
+                  <p class="action">
+                    Action
+                    <mat-icon class="action2">arrow_drop_down</mat-icon>
+                </button>
+
+                <mat-menu #menu="matMenu">
+
+                  <button mat-menu-item (click)="editAll(tags, doc.id)">
+                    <mat-icon style="font-size: 25px;">edit</mat-icon>
+                    <span style="font-size:20px">Edit</span>
+                  </button>
+
+                  <button mat-menu-item (click)="delete_personal(doc.id)">
+                    <mat-icon style="font-size: 25px;">delete</mat-icon>
+                    <span style="font-size:20px">Delete</span>
+                  </button>
+
+                  <button mat-menu-item (click)="viewItem(doc.doctype,doc.url)">
+                    <mat-icon style="font-size: 25px;">visibility</mat-icon>
+                    <span style="font-size:20px">View</span>
+                  </button>
+
+                  <button mat-menu-item (click)="download_personal(doc.id)">
+                    <mat-icon style="font-size: 25px;">save_alt</mat-icon>
+                    <span style="font-size:20px">Download</span>
+                  </button>
+
+                </mat-menu>
+
+              </td>
+            </tr><br>
+          </table>
+
+        </div>
+</div>
+
+    </div>
+</body>

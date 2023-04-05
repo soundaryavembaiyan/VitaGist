@@ -1,0 +1,286 @@
+<body>
+    <nav>
+
+        <ul>
+            <li>
+                <a href="https://vitagist.com/" class="logo">
+                    <img src="../../assets/vg.png" style="margin-left: -10px;" alt="">
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/side-bar" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                     #tooltip="matTooltip"  matTooltip="HOME"  matTooltipPosition="right">home</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Home</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/document" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;" #tooltip="matTooltip"  matTooltip="DOCUMENTS"  matTooltipPosition="right">library_books</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="margin-left: 4px; color:#004D87">Document</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/connections" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;" #tooltip="matTooltip"  matTooltip="CONNECTIONS"  matTooltipPosition="right">group_add</mat-icon>
+                </a>
+            </li>
+
+            <li>
+              <a routerLink="/health" class="logo">
+                  <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                  #tooltip="matTooltip"  matTooltip="HEALTH"  matTooltipPosition="right">favorite_border</mat-icon>
+              </a>
+          </li>
+
+            <li>
+                <a routerLink="/profile" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="PROFILE"  matTooltipPosition="right">account_circle</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Profile</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/settings" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="SETTINGS"  matTooltipPosition="right">settings</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Settings</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/notifications" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="NOTIFICATIONS"  matTooltipPosition="right">notifications_active</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Notifications</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/reminder" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="REMINDERS"  matTooltipPosition="right">query_builder</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Reminders</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/audit" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="AUDIT TRAILS"  matTooltipPosition="right">history</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Reminders</span> -->
+            </li>
+
+
+
+
+            <li>
+                <a routerLink="/logout" id="logoo" class="logout">
+                    <mat-icon style=" margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="LOGOUT"  matTooltipPosition="right">exit_to_app</mat-icon><br><br>
+                    <!-- <p style="color:#004D87; font-size: 18px; font-weight: 500; margin-top: 30px; margin-left: -42px;"> Logout</p> -->
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+<div class="container-fluid">
+<mat-card-content>
+
+<div class="container mt-4">
+        <h1 class="docDoc">My Health Profile</h1>
+<div class="container cont">
+
+  <form [formGroup]="myForm">
+  
+    <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+      <mat-label>Gender</mat-label>
+      <mat-select placeholder="Enter your Gender" 
+      #gender formControlName="gender" [ngModel]="profile_details?.gender" required>
+        <mat-option *ngFor="let item of Gender" [value]="item.name">
+          {{ item.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field><br>
+ 
+    <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+      <mat-label>Ethnicity</mat-label>
+      <mat-select placeholder="Enter Ethnicity" 
+       #ethnicity formControlName="ethnicity" [ngModel]="profile_details?.ethnicity" required>
+        <mat-option *ngFor="let item of Ethnicity" [value]="item.name">
+          {{ item.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field><br>
+
+    <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+      <mat-label>Height</mat-label>
+      <input type="number" matInput name="height" placeholder="Enter your Height" 
+      #height formControlName="height" [ngModel]="profile_details?.height" required>
+    </mat-form-field><br>
+  
+    <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+      <mat-label>Weight</mat-label>
+      <input type="number" matInput name="weight" placeholder="Enter your Weight" 
+      #weight formControlName="weight" [ngModel]="profile_details?.weight"required>
+    </mat-form-field><br>
+  
+    <!--<mat-form-field appearance="fill" style="width: 100%;">
+      <mat-label>Date Of Birth</mat-label>
+      <input matInput [matDatepicker]="picker" name="dob" placeholder="Enter your DOB" 
+      #dob formControlName="dob" [ngModel]="profile_details?.dob" required>
+      <[value]="get_date_value(profile_details?.dob)"--
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field><br>-->
+    
+    <mat-form-field appearance="fill" style="width: 100%;">
+      <mat-label>Date Of Birth</mat-label>
+      <input matInput name="dob" placeholder="Enter your DOB" formControlName="dob" [ngModel]="profile_details?.dob" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field><br>
+
+    <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+      <mat-label>Blood Group</mat-label>
+      <mat-select placeholder="Enter Blood Group" 
+      #bloodGroup formControlName="bloodGroup" [ngModel]="profile_details?.bloodGroup" required>
+        <mat-option *ngFor="let item of Blood" [value]="item.name">
+          {{ item.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field><br>
+  
+    
+<!--Dialogs for Conditions...-->
+    <mat-card class="mat_card_box">
+       Medical Condition  
+          <button class="plus_button" (click)="medicalDialog()">
+            <mat-icon class="plus_button_icon">add_circle</mat-icon>
+          </button>
+    </mat-card><br>
+
+    <div>
+      <mat-card class="mat_card_box2" *ngFor="let m of profile_details?.medicalCondition let i = index">
+        <p>{{m.conditionName}}</p>
+           <button class="plus_button" style="background-color: white;">
+             <mat-icon class="plus_button_icon" (click)="medicalEditDialog(i)">keyboard_arrow_right</mat-icon>
+           </button>
+      </mat-card><br>
+    </div>
+
+
+    <mat-card class="mat_card_box">
+       Allergy    
+         <button class="plus_button" (click)="allergyDialog()">
+           <mat-icon class="plus_button_icon">add_circle</mat-icon>
+         </button>
+    </mat-card><br>
+
+    <div>
+      <mat-card class="mat_card_box2" *ngFor="let a of profile_details?.allergy let i = index">
+        <p>{{a.allergicTo}}</p>
+           <button class="plus_button" style="background-color: white;">
+             <mat-icon class="plus_button_icon" (click)="allergyEditDialog(i)">keyboard_arrow_right</mat-icon>
+           </button>
+      </mat-card><br>
+    </div>
+
+
+    <mat-card class="mat_card_box">
+         Medications   
+         <button class="plus_button" (click)="medicationDialog()">
+           <mat-icon class="plus_button_icon">add_circle</mat-icon>
+         </button>
+    </mat-card><br>
+
+    <div>
+      <mat-card class="mat_card_box2" *ngFor="let m of profile_details?.medication let i = index">
+        <p>{{m.medicationName}}</p>
+           <button class="plus_button" style="background-color: white;">
+             <mat-icon class="plus_button_icon" (click)="medicationEditDialog(i)">keyboard_arrow_right</mat-icon>
+            </button>
+      </mat-card><br>
+    </div>
+
+   <mat-card class="mat_card_box">
+         Family Medical History   
+      <button class="plus_button" (click)="familyDialog()">
+         <mat-icon class="plus_button_icon">add_circle</mat-icon>
+      </button>
+    </mat-card><br>
+
+    <div>
+      <mat-card class="mat_card_box2" *ngFor="let f of profile_details?.familyHistory let i = index">
+        <p>{{f.conditionName}}</p>
+           <button class="plus_button" style="background-color: white;">
+             <mat-icon class="plus_button_icon" (click)="familyEditDialog(i)">keyboard_arrow_right</mat-icon>
+           </button>
+      </mat-card><br>
+    </div>
+
+    <mat-card class="mat_card_box">
+         Insurance   
+       <button class="plus_button" (click)="insuranceDialog()">
+           <mat-icon class="plus_button_icon">add_circle</mat-icon>
+       </button>
+     </mat-card><br>
+
+     <div>
+      <mat-card class="mat_card_box2" *ngFor="let in of profile_details?.insurance let i = index">
+        <p>{{in.insuranceCompany}}</p>
+           <button class="plus_button" style="background-color: white;">
+             <mat-icon class="plus_button_icon" (click)="insuranceEditDialog(i)">keyboard_arrow_right</mat-icon>
+           </button>
+      </mat-card><br>
+    </div>
+
+
+     <mat-card class="mat_card_box"> 
+        Immunization  
+       <button class="plus_button" (click)="immunizationDialog()">
+          <mat-icon class="plus_button_icon">add_circle</mat-icon>
+       </button>
+     </mat-card><br>
+
+     <div>
+      <mat-card class="mat_card_box2" *ngFor="let im of profile_details?.immunization let i = index">
+        <p>{{im.vaccineName}}</p>
+           <button class="plus_button" style="background-color: white;">
+             <mat-icon class="plus_button_icon" (click)="immunizationEditDialog(i)">keyboard_arrow_right</mat-icon>
+           </button>
+      </mat-card><br>
+    </div>
+
+
+     <div mat-dialog-actions class="docBut pull-right">
+      <button mat-raised-button class="btn btn-danger" style="background-color: red;"><b
+          style="color: white;">Cancel</b></button> &nbsp;
+      <button mat-raised-button class="btn btn-success" type="submit" (click)="saveMe(id)" style="background-color: rgb(4, 140, 4)"
+        cdkFocusInitial><b style="color: white;">Save</b></button>
+    </div>
+  </form>
+  
+  </div></div>
+
+
+  </mat-card-content>
+</div>
+
+
+<!--GoBack button-->
+<div class="pull-right">
+	<button class="btnbtn" [routerLink]="['/health']" > GoBack
+	  <i class="fa fa-backward" style="color: rgb(40, 39, 39); margin-top: -16px; margin-right: -10px;width: 30%;" aria-hidden="true"></i>
+   </button>
+</div>
+<!--GoBack button ends here..-->
+
+</body>

@@ -1,0 +1,290 @@
+@import url('~font-awesome/css/font-awesome.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font: normal normal 200 2rem Gill sans;
+}
+
+body {
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+}
+
+nav {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  background: #d9e8f8;
+  width: 55px;
+  /*nav width*/
+  overflow: hidden;
+  transition: width 0.2s linear;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0);
+}
+
+.logo {
+  text-align: center;
+  display: flex;
+  transition: all 0.5s ease;
+  margin: 10px 0 0 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 45px;
+  border-radius: 50%;
+  top: 0px;
+  left: 0px;
+
+  margin: -5px;
+}
+
+.logo span {
+  font-weight: 600;
+  padding-left: 2px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+a {
+  position: relative;
+  color: rgb(85, 83, 83);
+  font-size: 14px;
+  display: table;
+  width: 300px;
+  padding: 5px;
+}
+
+.nav-item {
+  position: relative;
+  top: -10px;
+  margin-left: 18px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+a:hover {
+  background: none;
+}
+
+.logout {
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  display: flex;
+  transition: all 0.5s ease;
+  margin: 8px 0 0 8px;
+}
+
+.material-icons {
+  font-family: 'Material Icons' !important;
+}
+
+.mat-icon{
+  color: #333738;
+}
+
+.mat-icon:hover {
+    color: rgb(116, 116, 116);
+  }
+
+/*....Nav ends hereee....*/
+
+ /*     Reminders    */
+.home {
+  text-align: center;
+  color: rgb(1, 75, 75);
+  letter-spacing: 0.15rem;
+  font: normal normal 500 2.5rem Gill sans;
+}
+
+/****   ....    ****/
+
+
+
+.profileCls {
+	display: inline-flex;
+}
+
+.profileCls img {
+	border-radius:50%;
+	margin-left:100px;
+	padding: 5px;
+	height: 50px;
+	width: 60px;
+	border: 2px solid #676767;
+}
+.profileCls h1 {
+	font-size: 20px;
+	margin-top: 5px;
+	color: black;
+	display: block;
+	margin-bottom: 0px;
+}
+.profileCls p {
+	margin-top: 0px;
+	display: block;
+}
+
+
+
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width:1000px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Media css for cards above 320px */
+@media screen and (min-width: 320px) and (max-width:800px) {
+   
+  
+  body {
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 198%;
+    width: 100%;
+    left: 0;
+  }
+
+  .home{
+    float: right;
+    margin-right: 10px;
+    margin-top: -40px;
+  }
+  
+
+}
+
+/* Media css for cards above 375px */
+@media screen and (min-width: 375px) and (max-width:800px) {
+ 
+
+  body {
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 198%;
+    width: 100%;
+    left: 0;
+  }
+  .home{
+    float: right;
+    margin-right: 40px;
+    margin-top: -40px;
+  }
+
+}
+
+/* Media css for cards above 425px */
+@media screen and (min-width: 425px) and (max-width:800px) {
+
+  body {
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 198%;
+    width: 100%;
+    left: 0;
+  }
+  .home{
+    float: right;
+    margin-right: 50px;
+    margin-top: -40px;
+  }
+  input[type=search] {
+    border: 0.5px solid #ccc;
+    border-radius: 10px;
+    resize: vertical;
+    width: 300px;
+    height: 40px;
+    float: right;
+    margin-right: -100px;
+  }
+
+  #insearch{
+    position: fixed;
+    height: 40px;
+    float: right;
+    margin-top: -1px;
+    margin-right: -430px;
+  }
+}
+
+/* Media css for cards above 768px Tablets */
+@media screen and (min-width: 768px) and (max-width:800px) {
+  body {
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 198%;
+    width: 100%;
+    left: 0;
+  }
+
+  .home{
+    float: right;
+    margin-right: 230px;
+    margin-top: -40px;
+  }
+}
+
+/* Media css for cards above 1024px */
+@media screen and (min-width: 1024px) and (max-width:1050px) {
+
+  body {
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 198%;
+    width: 100%;
+    left: 0;
+  }
+}
+
+/* Media css for cards 800 inspect */
+@media screen and (min-width: 800px) and (max-width:990px) {
+
+  body {
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 198%;
+    width: 100%;
+    left: 0;
+  }
+}
+
+
+

@@ -1,0 +1,15 @@
+<mat-card class="card">
+    <div class="container">
+
+        <div class="imgClass" style="padding: 6px;">
+            <i (click)="dialogAdd()" class="{{card_image[0]}}" [style]="card_image[1]"></i>
+        </div>
+
+        <p class="device" style="padding: 6px;">{{ card_details.device.category.name }}</p>
+        <h3>{{ card_details.value1 }} <span>{{ card_details.valueUnit1 }}</span></h3>
+        <p class="time" *ngIf="medium_value">Healthy Range: {{medium_value}} to {{high_value}}</p>
+        <p class="time">{{ card_details.readingDateTime }}</p>
+    </div>
+</mat-card>
+
+

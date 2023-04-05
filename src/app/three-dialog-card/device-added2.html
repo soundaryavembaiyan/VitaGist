@@ -1,0 +1,74 @@
+<div class="closeEdit">
+    <button (click)="onNoClick()"
+      style="float: right;  font-size: 20px; font-weight: 500; margin-top: -18px;  margin-right: -18px;" mat-raised-button
+      class="btn btn-warn" color="warn" mat-mini-fab> X </button>
+  </div>
+  
+  <div class="openDialog">
+    <p class="pfont">Blood pressure<span class="spanFont"> . bpm</span> </p>
+  
+    <form [formGroup]="myForm">
+  
+  
+      <mat-form-field appearance="fill" style="width: 100%;padding-top: 10px;">
+        <mat-label class="devicedata">Systolic <span class="spanF"> . {{device_card.valueUnit1}}</span></mat-label>
+        <input matInput type="number" #firstReading formControlName='firstReading' name="firstReading" required>
+      </mat-form-field><br>
+  
+      <mat-form-field appearance="fill" style="width: 100%;padding-top: 10px;">
+        <mat-label class="devicedata">Diastolic <span class="spanF"> . {{device_card.valueUnit1}}</span></mat-label>
+        <input matInput type="number" #secondReading formControlName='secondReading' name="secondReading" required>
+      </mat-form-field><br>
+  
+  
+      <mat-form-field appearance="fill" style="width: 100%;padding-top: 10px;">
+        <mat-label class="devicedata">Pulse <span class="spanF"> . {{device_card.valueUnit3}}</span></mat-label>
+        <input matInput type="number" #thirdReading formControlName='thirdReading' name="thirdReading" required>
+      </mat-form-field><br>
+  
+      <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>Choose a date</mat-label>
+        <!-- <input readonly [formControl]="dateSelected"  matInput [matDatepicker]="dp3" > -->
+        <input [max]="maxDate" readonly #dateSelected [value]="date1.value" matInput [matDatepicker]="dp3" required>
+        <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+        <mat-datepicker #dp3></mat-datepicker>
+      </mat-form-field>
+  
+      <mat-form-field class="set-time" appearance="fill" style="width: 30%;">
+        <mat-label>HH</mat-label>
+        <mat-select [(value)]="hour_value" required>
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let item of counter(13);let i= index" value="{{i}}">{{i}}</mat-option>
+        </mat-select>
+      </mat-form-field> &nbsp;
+  
+      <mat-form-field class="set-time" appearance="fill" style="width: 30%;">
+        <mat-label>MM</mat-label>
+        <mat-select [(value)]="minute_value" required>
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let item of counter(60); index as i" value="{{i}}">{{i}}</mat-option>
+        </mat-select>
+      </mat-form-field> &nbsp;
+  
+      <mat-form-field class="set-time" appearance="fill" style="width: 32.5%;">
+        <mat-label>AM/PM</mat-label>
+        <mat-select [(value)]="am_pm" required>
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let item of ampm_list" value="{{item}}">{{item}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <div class="update">
+        <p class="ppfont">Last Reading: {{last_updated}}</p>
+      </div>
+  
+      <div mat-dialog-actions class="docBut pull-right" style="padding: 10px;">
+        <button mat-raised-button class="btn btn-success" type="submit" style="background-color: rgb(4, 140, 4)"
+          (click)="save_data(firstReading.value, secondReading.value, thirdReading.value, dateSelected.value, hour_value, minute_value, am_pm, device_card.valueUnit1, device_card.valueUnit2, device_card.valueUnit3)"
+          cdkFocusInitial>
+          <b style="color: white;">Save</b></button>
+      </div>
+  
+    </form>
+  
+  </div>

@@ -1,0 +1,55 @@
+<mat-card-content>
+    <div class="closeEdit">
+       <button (click)="onNoClick()"
+         style="float: right;  font-size: 20px; font-weight: 500; margin-top: -18px;  margin-right: -18px;"
+         mat-raised-button class="btn btn-warn" color="warn" mat-mini-fab> X </button>
+     </div> 
+
+   <h1 mat-dialog-title style="font: normal normal 400 2rem Gill sans;">Medical Condition</h1>
+
+<!--Form-->
+<div class="openDialog">
+
+<form [formGroup]="myForm">
+
+    <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+        <mat-label>Medical Condition</mat-label>
+        <mat-select placeholder="Condition Name" #conditionName formControlName="conditionName" [ngModel]="medCon?.conditionName" required>
+          <mat-option *ngFor="let item of medical" [value]="item.name">
+            {{ item.name }}
+          </mat-option>
+        </mat-select>
+    </mat-form-field><br>
+
+      <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>Year of Diagnosis</mat-label>
+        <input matInput [matDatepicker]="picker" #yearOfDiagnosis placeholder="Enter your Diagnosis" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field><br>
+
+
+
+
+
+      <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+        <mat-label>Comment</mat-label>
+        <input type="text" matInput name="comment" #comment formControlName="comment" placeholder="Comment" 
+        [ngModel]="medCon?.comment">
+      </mat-form-field><br>
+
+
+<div mat-dialog-actions class="docBut pull-right">
+    <button mat-raised-button class="btn btn-success" 
+    (click)="save_Medcon(conditionName.value ,yearOfDiagnosis.value,comment.value)"  type="submit" style="background-color: rgb(4, 140, 4)" cdkFocusInitial>
+    <b style="color: white;">Save</b></button>
+
+    
+</div>
+<div>
+</div>
+
+</form>
+
+</div>
+</mat-card-content>

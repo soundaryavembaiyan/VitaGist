@@ -1,0 +1,24 @@
+<mat-card-content>
+
+    <div class="closeEdit">
+        <button (click)="closeDialog()"
+          style="float: right;  font-size: 20px; font-weight: 500; margin-top: -18px;  margin-right: -18px;"
+          mat-raised-button class="btn btn-warn" color="warn" mat-mini-fab> X </button>
+      </div>  
+  
+    <h1 mat-dialog-title style="font: normal normal 400 2rem Gill sans;">Delete Entity</h1>
+  
+    <div mat-dialog-content style="font: normal normal 400 1.2rem Gill sans;">Are you sure you want to delete this!.</div>
+    <br>
+    <div mat-dialog-actions class="pull-right">
+     
+      <button mat-raised-button style="font-size:25px" (click)="onNoClick()" style="background-color: red" >
+        <b style="color: white;">No</b>
+      </button>
+
+      <button mat-raised-button style="font-size:25px" (click)="delete_entity(id)"  style="background-color: rgb(4, 140, 4)" cdkFocusInitial>
+        <b style="color: white;">Yes</b> 
+      </button>
+    </div>
+  
+  </mat-card-content>

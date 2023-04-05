@@ -1,0 +1,60 @@
+ <style>
+        .requestButton1{
+          width: 49%; 
+          border: none;  
+          padding: 12px; 
+          color: white; 
+          text-transform: uppercase; 
+          background-color:rgb(246, 45, 45); 
+          font: normal normal 500 1.2rem Gill sans;
+    
+        }
+        .requestButton2{
+            width: 49%; 
+            border: none; 
+            float: right; 
+            margin-right: 2px; 
+            padding: 12px; 
+            color: white; 
+            text-transform: uppercase; 
+            background-color: rgb(4, 140, 4); 
+            font: normal normal 500 1.2rem Gill sans;
+        }
+</style>
+
+
+<!-- <div class="closeEdit">
+       <button (click)="closeDialog()"
+         style="float: right;  font-size: 20px; font-weight: 500; margin-top: -18px;  margin-right: -18px;"
+         mat-raised-button class="btn btn-warn" color="warn" mat-mini-fab> X </button>
+</div>   -->
+
+   <h1 mat-dialog-title style="font: normal normal 400 2rem Gill sans;">Relation Request</h1>
+    <p style="font: normal normal 400 1rem Gill sans;">Are you sure to send Relationship request with the selected Entity ?</p>
+   
+
+     <input type="text" placeholder="Request" value="Please accept the request!!" 
+     #entity_name formControlName="description" name="description" [ngModel]="add_details?.description" style="width: 100%;" required>
+
+     <!-- <div class="docBut pull-right" >
+        <button mat-raised-button class="btn btn-warn" color="warn" (click)="closeDialog()">
+            <b style="color: white;">Cancel</b>
+         </button>
+    
+        <button mat-raised-button class="btn btn-success" type="submit" style="background-color: rgb(4, 140, 4);" 
+        (click)="sendRequest(entity_name.value, id)" cdkFocusInitial>
+             <b style="color: white;">Send</b>
+        </button>
+    </div>  -->
+
+    <button class="requestButton1" (click)="closeDialog()"> Cancel </button>
+    <button class="requestButton2" type="submit"  (click)="sendRequest(entity_name.value, id)"> Send </button> 
+
+
+
+
+
+
+
+
+

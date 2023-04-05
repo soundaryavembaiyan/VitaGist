@@ -1,0 +1,103 @@
+<mat-card-content>
+         <div class="closeEdit">
+            <button (click)="closeDialog()"
+              style="float: right;  font-size: 20px; font-weight: 500; margin-top: -18px;  margin-right: -18px;"
+              mat-raised-button class="btn btn-warn" color="warn" mat-mini-fab> X </button>
+          </div> 
+  
+        <h1 mat-dialog-title style="font: normal normal 400 2rem Gill sans;">Document Upload</h1>
+
+<!--Form - tag == 'Identity'-->
+<div class="openDialog" *ngIf="selected_tag == 'Identity' ">
+  
+  <form [formGroup]="myForm" (ngSubmit)="submitData_Identity(myForm.value)">
+
+    <mat-form-field appearance="fill" style="width: 100%;">
+      <mat-label>Tags</mat-label>
+      <mat-select formControlName="tags" [ngModel]="tags" required multiple>
+        <mat-option *ngFor="let p of persons" [value]="p.Identity">
+          {{ p.Identity }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field><br>
+
+
+    <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+      <mat-label>Document Id: </mat-label>
+      <input type="text" matInput formControlName="docid" required>
+    </mat-form-field><br>
+
+
+    <mat-form-field appearance="fill" class="docTag" style="width: 100%;">
+      <mat-label>Document Type: </mat-label>
+      <mat-select formControlName="doctype" required>
+        <mat-option *ngFor="let dt of doctype" [value]="dt.name">
+          {{ dt.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <div class="col-md-12">
+      <mat-label> Select file: </mat-label>
+      <input type="file" formControlName="filename" class="file-upload" (change)="onFileChanged($event)" required>
+    </div><br>
+
+    <div mat-dialog-actions class="docBut pull-right">
+      <button mat-raised-button class="btn btn-danger" style="background-color: red;" (click)="onNoClick()"><b style="color: white;">Cancel</b></button>
+      <button mat-raised-button class="btn btn-success" type="submit" style="background-color: rgb(4, 140, 4)" cdkFocusInitial><b style="color: white;">Save</b></button>
+    </div>
+  </form>
+</div>
+
+<!--Form - tag != 'Identity'-->
+<div class="openDialog" *ngIf="selected_tag != 'Identity'">
+
+  <form [formGroup]="myForm"  (ngSubmit)="submitData_Personal(myForm.value)">
+    <mat-form-field appearance="fill" style="width: 100%;">
+      <mat-label>Tags</mat-label>
+      <mat-select formControlName="tags" [ngModel]="edit_details?.tags" required multiple>
+        <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%;">
+      <mat-label>Document Name: </mat-label>
+      <input type="text" matInput formControlName="name" [ngModel]="edit_details?.name" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%;">
+      <mat-label>Description: </mat-label>
+      <textarea matInput #description required formControlName='description' [ngModel]="edit_details?.description"
+        placeholder="Enter description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%;">
+      <mat-label>Expiration Date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="expiration_date"
+        [ngModel]="edit_details?.expiration_date" placeholder="Expiration date" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field> 
+    <!-- <p>{{ date | date:"dd/mm/yyyy"}}</p> -->
+
+    <div class="col-md-12">
+      <mat-label> Select file: </mat-label>
+      <input type="file" formControlName="filename" class="file-upload" (change)="onFileChanged($event)" multiple
+        required>
+    </div><br>
+
+    <div mat-dialog-actions class="docBut pull-right">
+      <button mat-raised-button class="btn btn-danger" style="background-color: red;" (click)="onNoClick()"><b style="color: white;">Cancel</b></button>
+      <button mat-raised-button class="btn btn-success" type="submit" style="background-color: rgb(4, 140, 4)" cdkFocusInitial><b style="color: white;">Save</b></button>
+    </div>
+    
+  </form>
+
+</div>
+</mat-card-content>
+  
+  
+  
+  
+   

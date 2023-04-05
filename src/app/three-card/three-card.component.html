@@ -1,0 +1,28 @@
+<mat-card class="card">
+    <div class="container">
+        <div class="pull-left">
+            <div class="imgClass" style="padding: 6px;">
+                <i (click)="dialogAdd()" class="{{card_image[0]}}" [style]="card_image[1]"></i>
+            </div>
+
+            <p class="device">{{ card_details.device.category.name }}</p>
+            <h3>{{ card_details.value3 }} <span>{{ card_details.valueUnit3 }}</span></h3>
+            <p class="time2">Healthy Range: {{medium_value3}} to {{high_value3}}</p>
+            <p class="time2">{{ card_details.readingDateTime }}</p>
+        </div>
+
+        <div class="pull-right">
+            <p class="device">Systolic</p>
+
+            <h2>{{ card_details.value1 }} <span>{{ card_details.valueUnit1 }}</span></h2>
+            <p class="time2">Healthy Range: {{medium_value1}} to {{high_value1}}</p>
+            <hr class="solid" style="color: white;">
+
+            <p class="device">Diastolic</p>
+
+            <h2>{{ card_details.value2 }} <span>{{ card_details.valueUnit2 }}</span></h2>
+            <p class="time2">Healthy Range: {{medium_value2}} to {{high_value2}}</p>
+        </div>
+
+    </div>
+</mat-card>

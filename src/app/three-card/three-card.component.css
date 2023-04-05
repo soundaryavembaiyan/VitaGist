@@ -1,0 +1,78 @@
+.container {
+  padding-left: 18px;
+  padding-right: 28px;
+}
+
+.card {
+  background-color: #1e2748;
+  width: 330px; 
+  height: 230px;
+  border-radius: 25px;
+}
+
+.card:hover {
+  box-shadow: 2px 1px 2px 2px rgba(136, 135, 135, 0.9);
+}
+
+.card span {
+  font: normal normal 400 1rem Gill sans;
+  color: whitesmoke;
+}
+
+.card h2 {
+  font: normal normal 400 1.5rem Gill sans;
+  color: whitesmoke;
+}
+
+.card h3 {
+  font: normal normal 400 2rem Gill sans;
+  color: whitesmoke;
+}
+
+.device {
+  color: #ffffff;
+  font: normal normal 600 1rem Gill sans;
+}
+
+.devicedata {
+
+  font: normal normal 400 1.2rem Gill sans;
+}
+
+.spanF {
+  font: normal normal 300 1rem Gill sans;
+  color: #58585b;
+}
+
+
+.time {
+  font: normal normal 200 0.5rem Gill sans;
+  color: whitesmoke;
+  bottom: 0px;
+}
+
+.time2 {
+  font: normal normal 200 0.7rem Gill sans;
+  color: whitesmoke;
+  bottom: 0px;
+}
+
+.pfont {
+  font: normal normal 400 1.8rem Gill sans;
+}
+
+.spanFont {
+  font: normal normal 300 1rem Gill sans;
+}
+
+.ppfont {
+  font: normal normal 400 1rem Gill sans;
+}
+
+.docBut {
+  float: right;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: -30px;
+  margin-right: -1px;
+}

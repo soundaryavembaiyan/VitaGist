@@ -1,0 +1,42 @@
+<mat-card-content>
+    <div class="closeEdit">
+       <button (click)="onNoClick()"
+         style="float: right;  font-size: 20px; font-weight: 500; margin-top: -18px;  margin-right: -18px;"
+         mat-raised-button class="btn btn-warn" color="warn" mat-mini-fab> X </button>
+     </div>  
+
+   <h1 mat-dialog-title style="font: normal normal 400 2rem Gill sans;">Search Family & Friends</h1>
+
+<!--Form-->
+<div class="openDialog">
+
+    <!--Search button-->
+<div class="input-group justify-content-center" style="padding:10px;">
+    <div class="form-outline">
+      <input type="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search.." size="30" id="form1" class="form-control" />
+    </div>
+    <button type="button" id="insearch" class="btn btn-primary text-bg-light" style="height: 38px;">
+      <i class="fa fa-search" ></i>
+    </button>
+  </div><br>
+  <!--Search button ends here..-->
+
+
+<div class="mat-tab">
+            <table>
+              <!-- <tr>  <th class="content">Users</th>  </tr> -->
+              <tr class="box" *ngFor="let c of connection | filter:searchText">
+                <td>{{c.firstName }} {{ c.lastName }}</td> 
+                <!--<td>{{c.lastName}}</td>-->
+  
+                <td>
+                    <button mat-button (click)="openDialogRR(c.id)" style="width: 118px; height: 26px;">
+                          <!-- <i class="fa fa-paper-plane-o" aria-hidden="true" style="color:white;"></i>-->
+                          <p class="action">Send Request</p>
+                    </button>
+                </td>
+              </tr>
+            </table>
+</div> 
+</div>
+</mat-card-content>

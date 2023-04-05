@@ -1,0 +1,164 @@
+<div>
+    <nav>
+
+        <ul>
+            <li>
+                <a href="https://vitagist.com/" class="logo">
+                    <img src="../../assets/vg.png" style="margin-left: -10px;" alt="">
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/side-bar" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                     #tooltip="matTooltip"  matTooltip="HOME"  matTooltipPosition="right">home</mat-icon>
+                </a>
+        
+                <!-- <span class="nav-item" style="color:#004D87">Home</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/document" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;" #tooltip="matTooltip"  matTooltip="DOCUMENTS"  matTooltipPosition="right">library_books</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="margin-left: 4px; color:#004D87">Document</span> -->
+            </li>
+            
+            <li>
+                <a routerLink="/connections" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;" #tooltip="matTooltip"  matTooltip="CONNECTIONS"  matTooltipPosition="right">group_add</mat-icon>
+                </a>
+            </li>
+
+            <li>
+              <a routerLink="/health" class="logo">
+                  <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                  #tooltip="matTooltip"  matTooltip="HEALTH"  matTooltipPosition="right">favorite_border</mat-icon>
+              </a>
+          </li>
+
+            <li>
+                <a routerLink="/profile" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="PROFILE"  matTooltipPosition="right">account_circle</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Profile</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/settings" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="SETTINGS"  matTooltipPosition="right">settings</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Settings</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/notifications" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="NOTIFICATIONS" matTooltipPosition="right">notifications_active</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Notifications</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/reminder" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="REMINDERS"  matTooltipPosition="right">query_builder</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Reminders</span> -->
+            </li>
+
+            <li>
+                <a routerLink="/audit" class="logo">
+                    <mat-icon style="margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="AUDIT TRAILS"  matTooltipPosition="right">history</mat-icon>
+                </a>
+                <!-- <span class="nav-item" style="color:#004D87">Reminders</span> -->
+            </li>
+
+
+
+
+            <li>
+                <a routerLink="/logout" id="logoo" class="logout">
+                    <mat-icon style=" margin-left: -10px; width: 40px; height: 36px;"
+                    #tooltip="matTooltip"  matTooltip="LOGOUT"  matTooltipPosition="right">exit_to_app</mat-icon><br><br>
+                    <!-- <p style="color:#004D87; font-size: 18px; font-weight: 500; margin-top: 30px; margin-left: -42px;"> Logout</p> -->
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+ <div class="container cont">
+
+<div class="container mt-4">
+    <h1 class="docDoc">Devices</h1>
+    <div class="container cont">
+
+        <mat-card class="mat_card_box">
+            <button class="plus_button" (click)="deviceDialog()">
+                <mat-icon class="plus_button_icon">add_circle</mat-icon>
+            </button>
+        </mat-card><br>
+
+    </div>
+</div>
+
+
+<div class="container text1">
+    <div class="container cont">
+    <h1 class="docDoc2">Manual Devices</h1>
+    </div>
+
+    <!--<div *ngIf="addedDevices?.length==0" class="no-dev">No Devices Found</div>-->
+
+    <div class="container cont">
+        <mat-card class="mat_card_box2" *ngFor="let item of addedDevices;">
+           
+            <p>&nbsp;&nbsp;
+            <button class="read-btn" *ngIf="item.image" style="background-color: white; font-size: 20px;">
+                <i class="{{item.image[0]}}"></i>
+            </button>&nbsp;
+               {{item.category?.name}}
+            </p>
+
+            <!--<p>{{item.category?.name}}</p>-->
+              <button style="background-color: white;" (click)="deleteDialog(item.id)" class="plus_button">
+                    <mat-icon class="plus_button_icon">delete</mat-icon>
+              </button>
+        </mat-card>
+    </div>
+</div><br>
+
+
+    <div class="container text1">
+        <div class="container cont">
+          <h1 class="docDoc2">BlueTooth Devices</h1>
+        </div>
+            <!--<div class="container cont">
+               <mat-card class="mat_card_box2">
+                      <button style="background-color: white;" class="plus_button">
+                        <mat-icon class="plus_button_icon">delete</mat-icon>
+                      </button>
+                </mat-card><br>       
+           </div>-->
+    </div>
+ 
+
+
+    
+    <!--GoBack button-->
+    <div class="pull-right">
+        <button class="btnbtn" [routerLink]="['/health']" > GoBack
+          <i class="fa fa-backward" style="color: rgb(40, 39, 39); margin-top: -16px; margin-right: -10px;width: 30%;" aria-hidden="true"></i>
+       </button>
+    </div>
+    <!--GoBack button ends here..-->
+</div>
+
+
+
+
