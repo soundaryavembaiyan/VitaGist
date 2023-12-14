@@ -537,4 +537,6 @@ input[type=search] {
   border: 0.5px solid #ccc;
   border-radius: 10px;
 }
-
+.bmiCard{
+  width:20px;
+}
