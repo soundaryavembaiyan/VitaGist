@@ -12,8 +12,6 @@ import { DatePipe } from '@angular/common';
   providers: [DatePipe]
 })
 export class LoginComponent implements OnInit {
-  
-
 //Geting user details:
   user_details: any;
   //user_details={ email: "soundaryavembaiyan@gmail.com",  password: "Soundz@0404" }
