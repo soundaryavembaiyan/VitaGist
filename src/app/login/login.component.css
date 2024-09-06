@@ -220,3 +220,12 @@ color: rgb(2, 35, 40);
   opacity: 1;
   right: 0;
 }
+.loginBtn{
+  color: white; 
+  height: 35px; 
+  font-family: Gill Sans ;
+  font-size: 18px; 
+  font-weight: 600;     
+  margin-left: 2px;
+  margin-top: -11px;
+}
