@@ -4,6 +4,24 @@ import { ToastrService } from 'ngx-toastr';
 import { UsersDataService } from '../users-data.service';
 import { Router } from '@angular/router';
 import { DatePipe } from '@angular/common';
+// import {
+//   FormGroupDirective,
+//   NgForm,
+//   Validators,
+//   FormsModule,
+//   ReactiveFormsModule,
+// } from '@angular/forms';
+// import {ErrorStateMatcher} from '@angular/material/core';
+// import {MatInputModule} from '@angular/material/input';
+// import {MatFormFieldModule} from '@angular/material/form-field';
+
+/** Error when invalid control is dirty, touched, or submitted. */
+// export class MyErrorStateMatcher implements ErrorStateMatcher {
+//   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+//     const isSubmitted = form && form.submitted;
+//     return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+//   }
+// }
 
 @Component({
   selector: 'app-login',
@@ -22,6 +40,7 @@ export class LoginComponent implements OnInit {
   tdydate:any;
   today=new Date();
   reminder: any;
+  //matcher = new MyErrorStateMatcher();
 
 constructor(private userData: UsersDataService,
   private router:Router,
@@ -53,7 +72,7 @@ submitData(data: any){
     
   }
   else{
-    this.toast.error("Check your login details")
+    this.toast.error("Please provide valid credentials")
   }
   })
 

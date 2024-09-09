@@ -185,7 +185,7 @@ body {
   border-radius: 1rem;
   padding: 1.5rem;
   z-index: 10;
-  color: whitesmoke;
+  /* color: whitesmoke; */
 }
 
 .title {
@@ -204,12 +204,15 @@ body {
   text-align: center;
   font-size: 1rem;
   color: whitesmoke;
-  background-color: #fa709a;
+  background-color: #078f8f;
   padding: 0.8rem 1.8rem;
   border-radius: 2rem;
   cursor: pointer;
 }
+.btn:hover{
+	background-color: black;
 
+}
 
 
 

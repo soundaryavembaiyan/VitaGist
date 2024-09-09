@@ -128,7 +128,7 @@ opacity: 1;
   border-radius: 10px;
   /* height: 144%;   White box hieght*/
   padding: 10px;
-  box-shadow: 5px 5px 8px rgb(147, 147, 147);
+  box-shadow: 2px 2px 12px #d6d6d6;
 }
 
 .act{
@@ -137,9 +137,27 @@ opacity: 1;
   margin-right: 660px;
   width: 149px;
   height: 43px;
-  background: #00B3A7 0% 0% no-repeat padding-box;
+  background: #EEEEEE 0% 0% no-repeat padding-box;
+  color:black;
   border-radius: 10px 0px 0px 10px;
   opacity: 1;
+  font-size:19px; 
+  font-weight: 350;
+  text-align: center;
+}
+.actro{
+  margin-top: 20px;
+  float: right;
+  margin-right: 660px;
+  width: 149px;
+  height: 43px;
+  background-color: #00B3A7;
+  color:white;
+  border-radius: 10px 0px 0px 10px;
+  opacity: 1;
+  font-size:19px; 
+  font-weight: 350;
+  text-align: center;
 }
 
 .actP{
@@ -152,9 +170,13 @@ opacity: 1;
   margin-right: 487px;
   width: 173px;
   height: 43px;
-  background: #EEEEEE 0% 0% no-repeat padding-box;
+  background: #00B3A7 0% 0% no-repeat padding-box;
+  color:white; 
   border-radius: 0px 10px 10px 0px;
   opacity: 1;
+  font-size:19px; 
+  font-weight: 350;
+  text-align: center;
 }
 
 .nonactP{
@@ -284,11 +306,11 @@ tr:hover {
 
 /*th data styling design*/
 .content{
-  font: normal normal 700 1.4rem Gill sans;
+  font: normal normal 600 1rem Gill sans;
 }
 
 .content1{
-  font: normal normal 500 2rem Gill sans;
+  font: normal normal 600 1rem Gill sans;
 }
 
 .contentP{
@@ -340,6 +362,7 @@ tr:hover {
     input[type=search] {
       border: 0.5px solid #ccc;
       border-radius: 10px;
+      font-size: 25px;
     }
 
 /* Lauditor Accept button*/
@@ -545,7 +568,12 @@ font-weight: 400;
     font-size: 30px;
   }
 }
-
+::placeholder {
+  color: rgb(156, 156, 156);
+  opacity: 1; 
+  font-size: 20px; 
+  margin-top: 120px !important;
+}
 /*
 .conButton{
   margin-right: -300px;

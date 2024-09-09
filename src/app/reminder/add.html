@@ -2,11 +2,11 @@
 
     <div class="closeEdit">
       <button (click)="closeDialog()"
-        style="float: right;  font-size: 20px; font-weight: 500; margin-top: -18px;  margin-right: -18px;"
+        style="float: right;  font-weight: 500; margin-top: -18px;  margin-right: -18px;"
         mat-raised-button class="btn btn-warn" color="warn" mat-mini-fab> X </button>
     </div> 
   
-    <h1 mat-dialog-title style="font: normal normal 400 2rem Gill sans;">Add Reminders</h1>
+    <h1 mat-dialog-title style="font: normal normal 400 1.4rem Gill sans;">Add Reminders</h1>
   
     <form [formGroup]="myForm" (ngSubmit)="submitData(myForm.value)">
   

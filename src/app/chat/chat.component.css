@@ -128,11 +128,12 @@ a:hover {
 	border: 2px solid #676767;
 }
 .profileCls h1 {
-	font-size: 20px;
-	margin-top: 5px;
-	color: black;
-	display: block;
-	margin-bottom: 0px;
+  font-size: 23px;
+  margin-left: 15px;
+  font-weight: 400;
+  margin-top: 15px;
+  color: black;
+  display: block;
 }
 .profileCls p {
 	margin-top: 0px;

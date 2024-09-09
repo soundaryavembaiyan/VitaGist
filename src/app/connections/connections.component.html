@@ -181,23 +181,14 @@
        
 <div class="container cont">
 <table class="conButton">
-        <button class="act" (click)="open_bottom_dialog($event)">
-            <p class="actP"> 
-                Add Connection 
-            </p>
-        </button>
-
-        <button class="nonact" (click)="viewDoc()">
-            <p class="nonactP"> 
-                View Connection
-            </p>
-        </button>       
+        <button class="act nonactP" (click)="open_bottom_dialog($event)">Add Connection</button>
+        <button class="nonact actP" (click)="viewDoc()">View Connection</button>       
 </table>
 
 <table class="conButton" *ngIf="isClassExpand" class="bottom_dialog" (click)="$event.stopPropagation()" >
   <div>
     <!--Open Dialog is here..-->
-      <button class="act" (click)="openDialogFF()">
+      <button class="actro" (click)="openDialogFF()">
         <p class="actP">  
           Family & Friends </p>
           <i class="fas fa-user-alt" style="font-size: 15px; color: white;"></i>
@@ -215,7 +206,7 @@
 <!--Search button-->
 <div class="input-group justify-content-center" style="padding: 30px;">
   <div class="form-outline">
-    <input type="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search.." size="30" id="form1" class="form-control" />
+    <input type="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search" size="30" id="form1" class="form-control" />
   </div>
   <button type="button" id="insearch" class="btn btn-primary text-bg-light">
     <i class="fa fa-search"></i>

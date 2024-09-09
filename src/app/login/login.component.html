@@ -13,7 +13,7 @@
             <div class="col-25"> <label for="email" class="inn"> Email: </label> </div>
             <div class="col-75">
               <input type="text" id="email" formControlName="email" [ngModel]="user_details?.email" class="form-control"
-                placeholder="Enter your Email ID">
+                placeholder="Enter your email">
             </div>
           </div>
 
@@ -24,8 +24,8 @@
                 <div class="input-group col-2 mx-auto">
                   <input name="password" [type]="showPassword ? 'text' : 'password'" formControlName="password"
                     [ngModel]="user_details?.password" class="form-control" class="form-control pwd-control"
-                    id="password-field" placeholder="Enter your Password">
-                  <div>
+                    id="password-field" placeholder="Enter your password">
+                  <div class="showeyeBtn">
                     <i alt="show" class="far fa-eye eye-show" (click)="showPassword = !showPassword" [class.hide]="!showPassword"></i>
                     <i alt="hide" class="far fa-eye-slash eye-hide" (click)="showPassword = !showPassword" [class.hide]="showPassword"></i>
                   </div>

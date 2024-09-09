@@ -52,7 +52,12 @@ URL = "https://" + this.domain + "/http-bind";
         console.log('imgRes',res)
       }
     })
-
+    this.userData.get_profile_sign().subscribe((result: any) => {
+      if (result.error == false) {
+        this.ownerName = result.data?.first_name && result.data?.last_name
+        console.log('owner',this.ownerName)
+      }
+    })
     if (localStorage.getItem('TOKEN') == null) {
       this.router.navigate(['/login']);
     }

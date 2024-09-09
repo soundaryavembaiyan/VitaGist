@@ -153,7 +153,7 @@ a:hover {
   border-radius: 10px;
   /* height: 144%;   White box hieght*/
   padding: 10px;
-  box-shadow: 5px 5px 8px rgb(147, 147, 147);
+  box-shadow: 2px 2px 12px #d6d6d6;
 }
 
 table {
@@ -170,11 +170,11 @@ td {
 th {
   text-align: left;
   padding: 8px;
-  font: normal normal 700 1rem Gill sans;
+  font: normal normal 600 1rem Gill sans;
 }
 
 .content{
-  font: normal normal 700 1.4rem Gill sans;
+  font: normal normal 600 1rem Gill sans;
 }
 
 tr:nth-child(even) .mat-raised-button {
@@ -216,9 +216,13 @@ h1 {
   margin-right: 660px;
   width: 149px;
   height: 43px;
-  background: #00B3A7 0% 0% no-repeat padding-box;
+  background: #EEEEEE 0% 0% no-repeat padding-box;
+  color:black; 
   border-radius: 10px 0px 0px 10px;
   opacity: 1;
+  font-size:19px; 
+  font-weight: 350;
+  text-align: center;
 }
 
 .nonact{
@@ -227,9 +231,13 @@ h1 {
   margin-right: 487px;
   width: 173px;
   height: 43px;
-  background: #EEEEEE 0% 0% no-repeat padding-box;
+  background: #00B3A7 0% 0% no-repeat padding-box;
+  color:white; 
   border-radius: 0px 10px 10px 0px;
   opacity: 1;
+  font-size:19px; 
+  font-weight: 350;
+  text-align: center;
 }
 
 
@@ -536,7 +544,15 @@ h1 {
 input[type=search] {
   border: 0.5px solid #ccc;
   border-radius: 10px;
+  font-size: 25px;
 }
 .bmiCard{
   width:20px;
+}
+
+::placeholder {
+  color: rgb(156, 156, 156);
+  opacity: 1; 
+  font-size: 20px; 
+  margin-top: 120px !important;
 }

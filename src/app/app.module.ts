@@ -135,7 +135,7 @@ import { ChatComponent } from './chat/chat.component';
     HttpClientModule,
     ToastrModule.forRoot({
       timeOut: 1000,
-      positionClass: 'toast-bottom-center',
+      positionClass: 'toast-top-right',
       maxOpened: 4,
       onActivateTick: true,
       preventDuplicates: true
