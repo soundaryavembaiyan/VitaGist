@@ -31,8 +31,8 @@ import { DatePipe } from '@angular/common';
 })
 export class LoginComponent implements OnInit {
 //Geting user details:
-  user_details: any;
-  //user_details={ email: "soundaryavembaiyan@gmail.com",  password: "Soundz@0404" }
+  //user_details: any;
+  user_details = { email: "soundaryavembaiyan@gmail.com",  password: "Soundz@0404" }
   getYear: number = new Date().getFullYear();
   registerForm: any;
   public showPassword: any;

@@ -49,13 +49,15 @@ URL = "https://" + this.domain + "/http-bind";
     this.userData.get_image().subscribe((res:any)=>{
       if(res.error==false){
         this.imgurl = res.imageUrl;
-        console.log('imgRes',res)
+        //console.log('imgRes',res)
       }
     })
     this.userData.get_profile_sign().subscribe((result: any) => {
       if (result.error == false) {
-        this.ownerName = result.data?.first_name && result.data?.last_name
-        console.log('owner',this.ownerName)
+        //this.ownerName = result.data?.first_name && result.data?.last_name
+        //this.ownerName = `${result.data?.first_name || ''} ${result.data?.last_name || ''}`.trim();
+        this.ownerName = (result.data?.first_name) + ' ' + (result.data?.last_name);
+        //console.log('ownerName',this.ownerName)
       }
     })
     if (localStorage.getItem('TOKEN') == null) {
