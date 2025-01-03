@@ -702,5 +702,4 @@ export class EditAllComponent {
   closeDialog() {
     this.dialogRef.close()
   }
-
-     }
+}
