@@ -6,7 +6,7 @@ body{
 }
 .left-col {
   height: 100vh;
-  margin-top: -20px;
+  /* margin-top: -20px; */
   background-color: #333738;
   align-items: center;
   justify-content: center;
@@ -183,7 +183,7 @@ color: rgb(2, 35, 40);
 .button {
   display: inline-block;
   border-radius: 4px;
-  background-color: #1c87f1;
+  background-color: rgb(5 98 148);
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -227,4 +227,77 @@ color: rgb(2, 35, 40);
   font-weight: 600;     
   margin-left: 2px;
   margin-top: -11px;
+}
+::placeholder {
+  color: rgb(156, 156, 156);
+  opacity: 1; 
+  font-family: Gill Sans ;
+  font-size: 15px; 
+}
+.showeyeBtn{
+  margin-left:20px;
+  margin-top: 7px;
+}
+
+.word {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #1111d5;
+  font: normal normal 400 0.90rem Gill sans;
+}
+
+.word::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px; /* Adjust thickness of underline */
+  background-color: #1111d5; /* Underline color */
+  transition: width 0.5s ease; /* Adjust duration and easing */
+}
+
+.word:hover::after {
+  width: 100%; /* Full width on hover */
+}
+
+.word.active::after {
+  width: 100%; /* Full width when clicked */
+}
+.hello {
+  backdrop-filter: blur(50px);
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+.closeDialog {
+  float: right;
+}
+.closeBtn {
+  font-size: 20px;
+  cursor: pointer;
+}
+.mailoption {
+  font-size: 20px;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: 400;
+  /* margin-left: -15px; */
+}
+.text-danger{
+  color: red !important;
+}
+.input-group-text{
+  height: 50px;
+}
+.subbutton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgb(5 98 148);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  width: 100px;
+  height: 45px;
+  padding-top: 15px;
+  cursor: pointer;
 }

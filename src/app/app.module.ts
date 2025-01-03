@@ -131,7 +131,6 @@ import { ConfirmationDialogComponent } from './login/login.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-<<<<<<< Updated upstream
     ToastrModule.forRoot({
       timeOut: 1000,
       positionClass: 'toast-bottom-center',
@@ -139,16 +138,6 @@ import { ConfirmationDialogComponent } from './login/login.component';
       onActivateTick: true,
       preventDuplicates: true
     }),
-=======
-    // ToastrModule.forRoot({
-    //   timeOut: 1000,
-    //   positionClass: 'toast-top-right',
-    //   maxOpened: 4,
-    //   onActivateTick: true,
-    //   preventDuplicates: true
-    // }),
-    ToastrModule.forRoot(),  
->>>>>>> Stashed changes
     ReactiveFormsModule,
     MatTableModule,
     MatInputModule,
