@@ -540,3 +540,10 @@ input[type=search] {
 .bmiCard{
   width:20px;
 }
+
+::placeholder {
+  color: rgb(156, 156, 156);
+  opacity: 1; 
+  font-size: 20px; 
+  margin-top: 120px !important;
+}

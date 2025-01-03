@@ -83,18 +83,11 @@ export class DocumentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     this.userData.get_document_page(this.tag).subscribe((result: any) => {
       this.docs = result.data
       console.log('result', this.docs);
     });
-    
-    //Document    -Identity, All docs
-    this.userData.get_document(this.tag).subscribe((result: any) => {
-      this.docs = result.data
-      console.log('result', this.docs);
-    });
-   
+    this.get_tags(this.tag)
     //Profile
     this.userData.get_profile_sign().subscribe((result: any) => {
       if (result.error == false) {
@@ -130,13 +123,13 @@ export class DocumentComponent implements OnInit {
     { 
       this.userData.get_document(tag).subscribe((result: any) => {
         this.docs = result.data
-        console.log('result', this.docs);
+        //console.log('result', this.docs);
       });
      }
     else{   //Personal doc form
       this.userData.get_tag_doc(tag).subscribe((result: any) => {
         this.docs = result.data 
-        console.log('result', this.docs); 
+        //console.log('result', this.docs); 
       });
     }
   }
@@ -160,14 +153,11 @@ export class DocumentComponent implements OnInit {
  delete_personal(id:any){
   this.userData.delete_personal_api(id).subscribe((result: any) => {
     if (result.error == false) {
-       this.toast.success(result.msg)
-       this.userData.get_all_del(this.index_country).subscribe((result: any) => {
-    if (result.error == false) {
-          this.docs = result.data
-          //this.router.navigate(['/document'])
-          window.location.reload()
-        }
-      })
+    this.toast.success(result.msg)
+    this.userData.get_tag_doc(this.tag).subscribe((result: any) => {
+      this.docs = result.data 
+      //console.log('result', this.docs); 
+    });
     }
   })
 }
@@ -330,12 +320,25 @@ firststyle: any;
         "expiration_date":new FormControl(),
         "category": new FormControl()
       });
-
+      console.log('tag',this.selected_tag)
     }
       
+  getDocumentsIdentity() {
+    this.userData.get_document(this.selected_tag).subscribe((result: any) => {
+      if (result.error == false) {
+        this.docs = result.data;
+      }
+    })
+  }
+  getDocumentsAll() {
+    this.userData.get_tag_doc(this.selected_tag).subscribe((result: any) => {
+      this.docs = result.data 
+    })
+  }
+
     //DialogIdentity submit/upload button..
   submitData_Identity(data: any){
-    console.warn('Your Data', this.myForm.value);
+    //console.warn('Your Data', this.myForm.value);
 
     const formData= new FormData();
     formData.append("docid",this.myForm.value.docid)
@@ -352,24 +355,20 @@ firststyle: any;
     if (result.error==false){
       this.toast.success("File Upload Successful");
       this.dialogRef.close({event:this.action});
-      //this.router.navigate(['/document'])
-      window.location.reload()
+      this.router.navigate(['/document'])
+      //window.location.reload()
     }
     else{
       this.toast.error("Upload Failed");
       console.log(this.data)
     }
     })
+    this.getDocumentsIdentity();
   }
   
   //DialogAll submit/upload button..
   submitData_Personal(data: any){
-    console.warn('Your Data', this.myForm.value);
-
-    console.log(this.name);
-    console.log(this.description);
-    console.log(this.expiration_date);
-    //console.log(this.filename);
+   // console.warn('Your Data', this.myForm.value);
  
     let date=this.myForm.value.expiration_date
     this.datenew = this.datePipe.transform(date,'dd-MM-YYYY')
@@ -389,29 +388,31 @@ firststyle: any;
         this.toast.success("File Upload Successful");
         this.closeDialog();
         //this.router.navigate(['/document'])
-        window.location.reload()
+        //window.location.reload()
       }
       else {
         this.toast.error("Upload Failed");
-        console.log('data',this.data)
-        console.log('topp',this.toppingList);
+        // console.log('data',this.data)
+        // console.log('topp',this.toppingList);
       }
     })
+    this.getDocumentsAll();
 }
 
 //files size target
   onFileChanged(event: any) {   
     this.files = event.target.files[0];
-    console.log(this.files)
-    }
+    //console.log(this.files)
+  }
 
   onNoClick(): void {
     this.dialogRef.close();
-    console.log(this.data)
+    //console.log(this.data)
   }
   
   closeDialog(){
-      this.dialogRef.close()
+      this.dialogRef.close();
+      this.getDocumentsAll()
    }
 }
 

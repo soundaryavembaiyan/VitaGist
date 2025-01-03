@@ -681,7 +681,6 @@ export class UsersDataService {
 			headers: new HttpHeaders({
 				"Authorization": "Bearer " + localStorage.getItem('TOKEN')
 			})
-
 		}) 
 
 	}	
@@ -721,6 +720,11 @@ export class UsersDataService {
 			  })
 		)
 	  }
-	  
+
+	  forgot_password(email: string){
+		return this.http.post(`${environment.digicofferurl}forgot/email`, {
+		  email
+		}, {observe: 'response'})
+	  }
 
 }

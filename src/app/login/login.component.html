@@ -34,6 +34,8 @@
             </div>
           </div>
 
+          <div style="text-align: end;"> <span class="word" (click)="toggleUnderline($event);openDialog()">Forgot Password</span></div>
+
           <div class="text-center">
             <!--<button class="button" [disabled]="registerForm.invalid"><b>LOGIN</b></button>--> <br>
             <button mat-raised-button class="button" style="vertical-align:middle" [disabled]="registerForm.invalid">
@@ -47,7 +49,7 @@
       </form>
 
       <div class="footer" style="font-family: Times New Roman ;font-size: 15px; font-weight: 100;">
-        &copy;VitaGist {{anio}}. All rights reserved.
+        &copy;VitaGist {{getYear}}. All rights reserved.
         <!--<br><br>
         v2.1.14-dev-->
       </div>

@@ -55,6 +55,7 @@ import { BmiComponent } from './bmi/bmi.component';
 import { SingledialogcardComponent, DeviceAddedComponent } from './singledialogcard/singledialogcard.component';
 import { ThreeDialogCardComponent, DeviceAdded2Component } from './three-dialog-card/three-dialog-card.component';
 import { ChatComponent } from './chat/chat.component';
+import { ConfirmationDialogComponent } from './login/login.component';
 
 
 @NgModule({
@@ -120,10 +121,7 @@ import { ChatComponent } from './chat/chat.component';
     ThreeDialogCardComponent,
     DeviceAdded2Component,
     ChatComponent,
-
-
-
-
+    ConfirmationDialogComponent
   ],
 
   imports: [
@@ -133,6 +131,7 @@ import { ChatComponent } from './chat/chat.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+<<<<<<< Updated upstream
     ToastrModule.forRoot({
       timeOut: 1000,
       positionClass: 'toast-bottom-center',
@@ -140,6 +139,16 @@ import { ChatComponent } from './chat/chat.component';
       onActivateTick: true,
       preventDuplicates: true
     }),
+=======
+    // ToastrModule.forRoot({
+    //   timeOut: 1000,
+    //   positionClass: 'toast-top-right',
+    //   maxOpened: 4,
+    //   onActivateTick: true,
+    //   preventDuplicates: true
+    // }),
+    ToastrModule.forRoot(),  
+>>>>>>> Stashed changes
     ReactiveFormsModule,
     MatTableModule,
     MatInputModule,
