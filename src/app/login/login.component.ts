@@ -25,7 +25,6 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   providers: [DatePipe]
 })
 export class LoginComponent implements OnInit {
-//Geting user details:
   //user_details: any;
   user_details = { email: "soundaryavembaiyan@gmail.com",  password: "Soundz@0404" }
   getYear: number = new Date().getFullYear();
@@ -35,6 +34,7 @@ export class LoginComponent implements OnInit {
   tdydate:any;
   today=new Date();
   reminder: any;
+  //myForm:any;
   //matcher = new MyErrorStateMatcher();
 
 constructor(private userData: UsersDataService,

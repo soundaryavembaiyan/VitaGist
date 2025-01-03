@@ -186,29 +186,20 @@
         <button class="nonact" (click)="viewDocs()">View Documents</button>
      </div>
      
+      <div class="conButton">
+        <button class="act"(click)="openDialogAll()">Add Documents</button>
+        <button class="nonact" (click)="viewDocs()">View Documents</button>
+     </div>
+     
 <!--Doc. Upload button-->
 <div class="container cont">
         
-
-        <table class="conButton">
-          <button class="act"(click)="openDialogAll()" >
-              <p style="font-size:19px; color:white; font-weight: 350;text-align: center;"> 
-                  Add Documents
-              </p>
-          </button>
-          <button class="nonact" (click)="viewDocs()">
-              <p style="font-size:19px; color:black; font-weight: 350;text-align: center;"> 
-                  View Documents
-              </p>
-          </button>
-       </table><br>
 <!--Doc. Upload button ends here-->
-
 
 <!--Search button-->
     <div class="input-group justify-content-center">
       <div class="form-outline">
-        <input type="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search.." size="30" id="form1" class="form-control" />
+        <input type="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search" size="30" id="form1" class="form-control" />
       </div>
       <button type="button" id="insearch" class="btn btn-primary text-bg-light">
         <i class="fa fa-search"></i>

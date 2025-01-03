@@ -547,3 +547,10 @@ input[type=search] {
   font-size: 20px; 
   margin-top: 120px !important;
 }
+.conButton{
+  text-align: center;
+  margin-bottom: 20px;
+    margin: 0;
+    border-radius: 10px;
+    padding: 10px;
+}
