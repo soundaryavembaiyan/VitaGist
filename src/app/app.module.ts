@@ -55,7 +55,7 @@ import { BmiComponent } from './bmi/bmi.component';
 import { SingledialogcardComponent, DeviceAddedComponent } from './singledialogcard/singledialogcard.component';
 import { ThreeDialogCardComponent, DeviceAdded2Component } from './three-dialog-card/three-dialog-card.component';
 import { ChatComponent } from './chat/chat.component';
-
+import { ConfirmationDialogComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -120,10 +120,7 @@ import { ChatComponent } from './chat/chat.component';
     ThreeDialogCardComponent,
     DeviceAdded2Component,
     ChatComponent,
-
-
-
-
+    ConfirmationDialogComponent
   ],
 
   imports: [

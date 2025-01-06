@@ -1,3 +1,5 @@
+@import '~ngx-toastr/toastr.css';
+
 body{
   margin: 0;
   padding: 0;
@@ -33,7 +35,6 @@ body{
     background-color:#1976d2;
     border: none;
     color: white;
-    
     width: 100px;
     height: 50px;
     text-align: center;
@@ -42,7 +43,6 @@ body{
     font-size: 16px;
     margin: 4px 4px;
     cursor: pointer;
-   
   }
   .button1 {
     border-radius: 12px;
@@ -50,7 +50,6 @@ body{
   }
   
 button:hover{
-    
     color: #fff;
 }
 
@@ -188,7 +187,7 @@ color: rgb(2, 35, 40);
   border: none;
   color: #FFFFFF;
   text-align: center;
-  padding: 20px;
+  padding: 18px;
   width: 150px;
   transition: all 0.5s;
   cursor: pointer;
@@ -238,4 +237,67 @@ color: rgb(2, 35, 40);
 .showeyeBtn{
   margin-left:20px;
   margin-top: 7px;
+}
+
+.word {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #1111d5;
+  font: normal normal 400 0.90rem Gill sans;
+}
+
+.word::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px; /* Adjust thickness of underline */
+  background-color: #1111d5; /* Underline color */
+  transition: width 0.5s ease; /* Adjust duration and easing */
+}
+
+.word:hover::after {
+  width: 100%; /* Full width on hover */
+}
+
+.word.active::after {
+  width: 100%; /* Full width when clicked */
+}
+.hello {
+  backdrop-filter: blur(50px);
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+.closeDialog {
+  float: right;
+}
+.closeBtn {
+  font-size: 20px;
+  cursor: pointer;
+}
+.mailoption {
+  font-size: 20px;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: 400;
+  /* margin-left: -15px; */
+}
+.text-danger{
+  color: red !important;
+}
+.input-group-text{
+  height: 50px;
+}
+.subbutton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgb(5 98 148);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  width: 100px;
+  height: 45px;
+  padding-top: 15px;
+  cursor: pointer;
 }

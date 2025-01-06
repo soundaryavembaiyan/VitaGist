@@ -13,7 +13,7 @@
             <div class="col-25"> <label for="email" class="inn"> Email: </label> </div>
             <div class="col-75">
               <input type="text" id="email" formControlName="email" [ngModel]="user_details?.email" class="form-control"
-                placeholder="Enter your email">
+                placeholder="Enter your Email ID">
             </div>
           </div>
 
@@ -24,8 +24,8 @@
                 <div class="input-group col-2 mx-auto">
                   <input name="password" [type]="showPassword ? 'text' : 'password'" formControlName="password"
                     [ngModel]="user_details?.password" class="form-control" class="form-control pwd-control"
-                    id="password-field" placeholder="Enter your password">
-                  <div class="showeyeBtn">
+                    id="password-field" placeholder="Enter your Password">
+                  <div>
                     <i alt="show" class="far fa-eye eye-show" (click)="showPassword = !showPassword" [class.hide]="!showPassword"></i>
                     <i alt="hide" class="far fa-eye-slash eye-hide" (click)="showPassword = !showPassword" [class.hide]="showPassword"></i>
                   </div>
@@ -33,6 +33,8 @@
               </div>
             </div>
           </div>
+
+          <div style="text-align: end;"> <span class="word" (click)="toggleUnderline($event);openDialog()">Forgot Password</span></div>
 
           <div class="text-center">
             <!--<button class="button" [disabled]="registerForm.invalid"><b>LOGIN</b></button>--> <br>
@@ -47,9 +49,8 @@
       </form>
 
       <div class="footer" style="font-family: Times New Roman ;font-size: 15px; font-weight: 100;">
-        &copy;VitaGist {{getYear}}. All rights reserved.
-        <!--<br><br>
-        v2.1.14-dev-->
+        &copy;VitaGist. All rights reserved.
+        <!-- &copy;VitaGist {{}}. All rights reserved. -->
       </div>
 
     </div>
