@@ -78,7 +78,7 @@ submitData(data: any){
   if (result.error==false){
     localStorage.setItem('TOKEN', result.token); 
     localStorage.setItem('PK',result.data.pk)
-    this.toast.success("Login Successful")
+    //this.toast.success("Login Successful")
     this.router.navigate(['/side-bar'])
   }
   else{
